@@ -2542,7 +2542,7 @@ N/A
 
 ## π-Base
 
-* Website: https://topology.jdabbs.com
+* Website: [https://topology.jdabbs.com](https://topology.pi-base.org/)
 * Number of objects: N/A
 * Number of datasets: N/A
 * Number of contributors: N/A

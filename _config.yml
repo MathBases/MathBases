@@ -8,5 +8,18 @@ theme: jekyll-theme-slate
 title: MathDB
 description: A database of mathematical databases
 exclude: ["README.md"]
+
+defaults: # setting default variables for pages, e.g., layout
+  -
+    scope:
+      path: "_databases"
+    values:
+      layout: "default"
+      # TODO: replace with "database"
+
+github:
+  - is_project_page: false
+show_downloads: false
+
   # google_analytics: UA-145714554-1
   # hostname: "beantheory.org"

@@ -1,6 +1,6 @@
 # Linux
 
-1. Install Ruby
+1. Install Ruby (and possibly ruby-dev)
 
 2. Bootstrap
 

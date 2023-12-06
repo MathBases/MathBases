@@ -1,0 +1,11 @@
+
+collections:
+  databases:
+
+
+theme: jekyll-theme-slate
+title: MathDB
+description: A database of mathematical databases
+exclude: ["README.md"]
+  # google_analytics: UA-145714554-1
+  # hostname: "beantheory.org"

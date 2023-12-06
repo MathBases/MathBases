@@ -19,6 +19,7 @@ To do this locally, you can instead do the following.
 ```
 gem install bundler --user-install
 bundle config set --local path '/home/YOURUSERNAME/.local/share/gem'
+bundle install
 ```
 
 or a similar path of your choosing.

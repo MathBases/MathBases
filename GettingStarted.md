@@ -4,7 +4,7 @@
 
 2. Bootstrap
 
-> gem install --user-install  
+> gem install bundler --user-install  
 > export GEM_HOME=$HOME/.gem  
 > export GEM_PATH=$HOME/.gem  
 > bundle install

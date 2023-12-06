@@ -1,4 +1,5 @@
 ---
+title: LMFDB
 name: LMFDB ...
 url: www.lmfdb.org
 badges: [foo, bar]

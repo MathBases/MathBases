@@ -1,6 +1,7 @@
 
 collections:
   databases:
+    output: true
 
 
 theme: jekyll-theme-slate
@@ -9,5 +10,18 @@ description: A database of mathematical databases
 exclude:
   - "DATA.md"
   - "split_data.py"
+
+defaults: # setting default variables for pages, e.g., layout
+  -
+    scope:
+      path: "_databases"
+    values:
+      layout: "default"
+      # TODO: replace with "database"
+
+github:
+  - is_project_page: false
+show_downloads: false
+
   # google_analytics: UA-145714554-1
   # hostname: "beantheory.org"

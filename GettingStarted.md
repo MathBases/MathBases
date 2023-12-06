@@ -1,3 +1,16 @@
+# Linux
+
+1. Install Ruby
+
+2. Bootstrap
+
+> gem install --user-install
+> export GEM_HOME=$HOME/.gem
+> export GEM_PATH=$HOME/.gem
+> bundle install
+
+# Mac
+
 1. Install Ruby:
  - on a Mac, you can use Homebrew with
 

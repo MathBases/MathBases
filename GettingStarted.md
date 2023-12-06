@@ -4,10 +4,14 @@
 
 2. Bootstrap
 
-> gem install bundler --user-install  
-> export GEM_HOME=$HOME/.gem  
-> export GEM_PATH=$HOME/.gem  
-> bundle install
+```
+gem install bundler --user-install
+export GEM_HOME=$HOME/.gem
+export GEM_PATH=$HOME/.gem
+bundle install
+```
+
+3. Run `make serve` to run locally
 
 # Mac
 

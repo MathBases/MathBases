@@ -16,7 +16,7 @@ layout: plain
         {% assign sorted = site.databases | sort: "title" %}
         {% for p in sorted %}
             <tr>
-                <td><a href="{{ p.id }}">ⓘ</a></td>
+                <td class="centered-td"><a href="{{ p.id }}"><i class="fas fa-info-circle"></i></a></td>
                 <td>
                     <a href="{{ p.location }}" target="_blank">
                         {{ p.title }}

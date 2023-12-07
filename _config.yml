@@ -5,7 +5,8 @@ collections:
 
 # See https://github.com/mmistakes/minimal-mistakes/issues/1875
 # for configuring minimal-mistakes theme
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+# remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-paginate
   - jekyll-sitemap

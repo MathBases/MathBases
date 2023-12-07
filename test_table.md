@@ -3,7 +3,6 @@ layout: table
 tableid: test
 ---
 
-<div>
 <table id="test" class="display mainTable">
     <thead>
         <tr>
@@ -12,13 +11,20 @@ tableid: test
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>Row 2 Data 1</td>
-            <td>Row 2 Data 2</td>
-        </tr>
+        {% assign sorted = site.databases | sort: "name" %}
+  {% for p in sorted %}
+    {% unless p.private %}
+    <tr>
+        <td>
+          <a href="{{p.url}}" target="_blank">
+            {{p.name}}
+          </a>
+        </td>
+        <td>
+            {{p.authors[0].name}}
+        </td>
+    </tr>
+    {% endunless %}
+  {% endfor %}
     </tbody>
 </table>

@@ -1,11 +1,9 @@
-
 collections:
   databases:
     output: true
     permalink: /dataset/:name
 
-
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 title: MathDB
 description: A database of mathematical databases
 exclude:
@@ -13,8 +11,7 @@ exclude:
   - "split_data.py"
 
 defaults: # setting default variables for pages, e.g., layout
-  -
-    scope:
+  - scope:
       path: "_databases"
     values:
       layout: "dataset"
@@ -22,7 +19,8 @@ defaults: # setting default variables for pages, e.g., layout
 
 github:
   - is_project_page: false
-show_downloads: false
+show_downloads:
+  false
 
   # google_analytics: UA-145714554-1
   # hostname: "beantheory.org"

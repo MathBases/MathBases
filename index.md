@@ -1,3 +1,6 @@
+---
+layout: home
+---
 <h1 class="smallcaps">Index of Mathematical DataBases</h1>
 <table class="display datatable">
     <thead>
@@ -17,6 +20,7 @@
                 <td>
                     <a href="{{ p.location }}" target="_blank">
                         {{ p.title }}
+                        <i class="fas fa-external-link-alt"></i>
                     </a>
                     {% if p.authors %}
                         {% assign authors = p.authors | map: "name" %}

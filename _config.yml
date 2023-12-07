@@ -15,7 +15,7 @@ plugins:
   - jekyll-include-cache
 
 title: MathBases
-description: A database of mathematical databases
+description: Of, by, and for mathematical databases
 exclude:
   - "DATA.md"
   - "split_data.py"

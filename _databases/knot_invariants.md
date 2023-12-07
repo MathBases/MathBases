@@ -1,12 +1,13 @@
 ---
-id: knot_invariants
-name: Table of Knot Invariants
-location: http://www.indiana.edu/~knotinfo/
 authors:
- - name: Charles Livingston
-   homepage: https://livingst.pages.iu.edu
+- homepage: https://livingst.pages.iu.edu
+  name: Charles Livingston
+id: knot_invariants
+location: http://www.indiana.edu/~knotinfo/
 tags:
- - knot invariant
- - knot-theory (MO)
+- knot invariant
+- knot-theory (MO)
+title: Table of Knot Invariants
+
 ---
 

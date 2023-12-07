@@ -1,10 +1,11 @@
 ---
-id: planar_hypohamiltonian_graphs
-name: Planar Hypohamiltonian Graphs
-location: http://www.jooyandeh.com/Combinatorics/Data/PlanarHypohamiltonian.aspx
 authors:
- - name: Reza Jooyandeh
+- name: Reza Jooyandeh
+id: planar_hypohamiltonian_graphs
+location: http://www.jooyandeh.com/Combinatorics/Data/PlanarHypohamiltonian.aspx
 tags:
- - graph
+- graph
+title: Planar Hypohamiltonian Graphs
+
 ---
 

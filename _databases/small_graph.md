@@ -1,10 +1,11 @@
 ---
-id: small_graph
-name: Small Graph Database
-location: https://jasongrout.org/graph_database
 authors:
- - name: Jason Grout
+- name: Jason Grout
+id: small_graph
+location: https://jasongrout.org/graph_database
 tags:
- - graph
+- graph
+title: Small Graph Database
+
 ---
 

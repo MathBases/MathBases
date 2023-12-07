@@ -1,11 +1,12 @@
 ---
-id: parameters_strongly_regular_graphs
-name: Parameters of Strongly Regular Graphs
-location: https://www.win.tue.nl/~aeb/graphs/srg/srgtab.html
 authors:
- - name: Andries Brouwer
-   homepage: https://www.win.tue.nl/~aeb/
+- homepage: https://www.win.tue.nl/~aeb/
+  name: Andries Brouwer
+id: parameters_strongly_regular_graphs
+location: https://www.win.tue.nl/~aeb/graphs/srg/srgtab.html
 tags:
- - graph
+- graph
+title: Parameters of Strongly Regular Graphs
+
 ---
 

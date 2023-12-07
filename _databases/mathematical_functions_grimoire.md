@@ -1,10 +1,11 @@
 ---
-id: mathematical_functions_grimoire
-name: The Mathematical Functions Grimoire
-location: http://fungrim.org/
 authors:
- - name: Fredrik Johansson
-   homepage: http://fredrikj.net/
+- homepage: http://fredrikj.net/
+  name: Fredrik Johansson
+id: mathematical_functions_grimoire
+location: http://fungrim.org/
+title: The Mathematical Functions Grimoire
+
 ---
 
 An open source library of formulas for mathematical functions

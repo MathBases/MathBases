@@ -1,14 +1,15 @@
 ---
-id: number_fields_jr
-name: Database of Number Fields
-location: https://hobbes.la.asu.edu/NFDB/
 authors:
- - name: John Jones
-   homepage: https://hobbes.la.asu.edu/
- - name: David P. Roberts
-tags:
- - number field
+- homepage: https://hobbes.la.asu.edu/
+  name: John Jones
+- name: David P. Roberts
+id: number_fields_jr
+location: https://hobbes.la.asu.edu/NFDB/
 references:
- - doi: 10.1112/S1461157014000424
+- doi: 10.1112/S1461157014000424
+tags:
+- number field
+title: Database of Number Fields
+
 ---
 

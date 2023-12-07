@@ -1,11 +1,12 @@
 ---
-id: graphs_combinatorica_format
-name: A Database of Graphs in Combinatorica Format
-location: http://www3.cs.stonybrook.edu/~skiena/combinatorica/graphs/
 authors:
- - name: Sriram Pemmaraju
- - name: Steven Skiena
+- name: Sriram Pemmaraju
+- name: Steven Skiena
+id: graphs_combinatorica_format
+location: http://www3.cs.stonybrook.edu/~skiena/combinatorica/graphs/
 tags:
- - graph
+- graph
+title: A Database of Graphs in Combinatorica Format
+
 ---
 

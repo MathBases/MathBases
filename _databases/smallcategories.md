@@ -1,12 +1,13 @@
 ---
-id: smallcategories
-name: SmallCategories
-location: https://smallcats.info/
 authors:
- - name: Ben Spitz
-   homepage: https://benspitz.com/
+- homepage: https://benspitz.com/
+  name: Ben Spitz
+id: smallcategories
+location: https://smallcats.info/
 tags:
- - ct.category-theory (MO)
+- ct.category-theory (MO)
+title: SmallCategories
+
 ---
 
 Produce, maintain, and make available a database of small finite categories which is useful and useable.

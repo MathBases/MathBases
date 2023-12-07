@@ -1,13 +1,13 @@
 ---
-id: pi_base
-name: "π-Base"
-location: >
-  [https://topology.jdabbs.com](https://topology.pi-base.org/)
 authors:
-  - name: James Dabbs
-    homepage: https://github.com/jamesdabbs
-  - name: Steven Clontz
-    homepage: https://github.com/stevenclontz
+- homepage: https://github.com/jamesdabbs
+  name: James Dabbs
+- homepage: https://github.com/stevenclontz
+  name: Steven Clontz
+id: pi_base
+location: https://topology.pi-base.org/
+title: "\u03C0-Base"
+
 ---
 
 A community database of topological counterexamples

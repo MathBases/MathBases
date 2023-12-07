@@ -1,6 +1,7 @@
 ---
 id: graphlopedia
-name: Graphlopedia
 location: http://graphlopedia.org
+title: Graphlopedia
+
 ---
 

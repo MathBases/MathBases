@@ -1,11 +1,12 @@
 ---
-id: association_schemes_small_vertices
-name: Classification of association schemes with small vertices
-location: http://math.shinshu-u.ac.jp/~hanaki/as/
 authors:
- - name: Izumi Miyamoto
- - name: Akihide Hanaki
+- name: Izumi Miyamoto
+- name: Akihide Hanaki
+id: association_schemes_small_vertices
+location: http://math.shinshu-u.ac.jp/~hanaki/as/
 tags:
- - association scheme
+- association scheme
+title: Classification of association schemes with small vertices
+
 ---
 

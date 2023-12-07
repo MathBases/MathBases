@@ -2,6 +2,7 @@
 
 from collections import Counter
 import re
+import yaml
 
 def parse_author(line):
     line = line.replace("* ", "").strip()
@@ -64,7 +65,6 @@ def get_records():
 def get_id(name, website):
     # Two disambiguations
     if name == "Combinatorial Data":
-        print("Website", website)
         if website == "http://users.monash.edu.au/~iwanless/data/":
             return "combinatorial_data_iw"
         else:
@@ -123,41 +123,40 @@ def write_records():
     #for id, name in zip(ids, names):
     #    print(f"{id:50}{name}")
     for id, rec in zip(ids, records):
+        yml = {}
+        yml["id"] = id
+        yml["title"] = rec["name"]
+        if "Website" in rec:
+            yml["location"] = rec['Website']
+        if "Number of objects" in rec:
+            yml["objects"] = int(rec['Number of objects'])
+        if "Number of datasets" in rec and rec["Number of datasets"] != "1":
+            yml["datasets"] = int(rec['Number of datasets'])
+        if "Number of contributors" in rec:
+            yml["contributors"] = rec['Number of contributors']
+        # omit size for now
+        # omit time to generate for now
+        # skipping completeness for now
+        # skipping collaborative for now
+        # skipping searchable for now
+        if rec.get("authors"):
+            yml["authors"] = []
+            for name, homepage in rec["authors"]:
+                if homepage:
+                    yml["authors"].append({"name": name, "homepage": homepage})
+                else:
+                    yml["authors"].append({"name": name})
+        if rec.get("tags"):
+            yml["tags"] = rec["tags"]
+        if rec.get("references"):
+            yml["references"] = []
+            for ref in rec["references"]:
+                typ, url = ref.split(":", 1)
+                if url.startswith("arxiv:"):
+                    url = url.replace("arxiv:", "")
+                yml["references"].append({typ: url})
         with open(f"_databases/{id}.md", "w") as F:
-            yml = f"""---
-id: {id}
-name: {rec['name']}
-"""
-            if "Website" in rec:
-                yml += f"location: {rec['Website']}\n"
-            if "Number of objects" in rec:
-                yml += f"objects: {rec['Number of objects']}\n"
-            if "Number of datasets" in rec and rec["Number of datasets"] != "1":
-                yml += f"datasets: {rec['Number of datasets']}\n"
-            if "Number of contributors" in rec:
-                yml += f"contributors: {rec['Number of contributors']}\n"
-            # omit size for now
-            # omit time to generate for now
-            # skipping completeness for now
-            # skipping collaborative for now
-            # skipping searchable for now
-            if rec["authors"]:
-                yml += "authors:\n"
-                for name, homepage in rec["authors"]:
-                    yml += f" - name: {name}\n"
-                    if homepage:
-                        yml += f"   homepage: {homepage}\n"
-            if rec.get("tags"):
-                yml += "tags:\n"
-                for tag in rec["tags"]:
-                    yml += f" - {tag}\n"
-            if rec.get("references"):
-                yml += "references:\n"
-                for ref in rec["references"]:
-                    typ, url = ref.split(":", 1)
-                    if url.startswith("arxiv:"):
-                        url = url.replace("arxiv:", "")
-                    yml += f" - {typ}: {url}\n"
+            yml = f"---\n{yaml.dump(yml)}\n"
             if rec.get("description"):
                 yml += f"""---
 

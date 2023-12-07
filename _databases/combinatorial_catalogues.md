@@ -1,9 +1,10 @@
 ---
-id: combinatorial_catalogues
-name: Combinatorial Catalogues
-location: http://staffhome.ecm.uwa.edu.au/~00013890/data.html
 authors:
- - name: Gordon Royle
-   homepage: https://research-repository.uwa.edu.au/en/persons/gordon-royle
+- homepage: https://research-repository.uwa.edu.au/en/persons/gordon-royle
+  name: Gordon Royle
+id: combinatorial_catalogues
+location: http://staffhome.ecm.uwa.edu.au/~00013890/data.html
+title: Combinatorial Catalogues
+
 ---
 

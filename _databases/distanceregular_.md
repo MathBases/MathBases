@@ -1,13 +1,14 @@
 ---
-id: distanceregular_
-name: DistanceRegular.org
-location: http://www.distanceregular.org/
 authors:
- - name: Robert Bailey
-   homepage: http://www2.grenfell.mun.ca/rbailey
- - name: Adam Jackson
- - name: Courtney  Weir
+- homepage: http://www2.grenfell.mun.ca/rbailey
+  name: Robert Bailey
+- name: Adam Jackson
+- name: Courtney  Weir
+id: distanceregular_
+location: http://www.distanceregular.org/
 tags:
- - graph
+- graph
+title: DistanceRegular.org
+
 ---
 

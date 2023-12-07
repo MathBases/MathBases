@@ -1,10 +1,11 @@
 ---
-id: local_fields
-name: Database of Local Fields
-location: https://math.la.asu.edu/~jj/localfields/
 authors:
- - name: John Jones
-   homepage: https://hobbes.la.asu.edu/
- - name: David P. Roberts
+- homepage: https://hobbes.la.asu.edu/
+  name: John Jones
+- name: David P. Roberts
+id: local_fields
+location: https://math.la.asu.edu/~jj/localfields/
+title: Database of Local Fields
+
 ---
 

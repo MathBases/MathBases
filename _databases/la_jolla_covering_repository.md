@@ -1,11 +1,12 @@
 ---
-id: la_jolla_covering_repository
-name: La Jolla Covering Repository Tables
-location: http://ljcr.dmgordon.org/cover/table.html
 authors:
- - name: Dan Gordon
-   homepage: https://www.dmgordon.org/
+- homepage: https://www.dmgordon.org/
+  name: Dan Gordon
+id: la_jolla_covering_repository
+location: http://ljcr.dmgordon.org/cover/table.html
 tags:
- - covering design
+- covering design
+title: La Jolla Covering Repository Tables
+
 ---
 

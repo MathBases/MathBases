@@ -1,5 +1,5 @@
 serve:
-	bundle exec jekyll serve --trace $(extra)
+	bundle exec jekyll serve --trace $(extra) --config _config.yml,_config.local.yml
 
 bootstrap:
 	gem install bundler
@@ -8,7 +8,7 @@ bootstrap:
 all: _site
 
 _site:
-	bundle exec jekyll build --trace $(extra)
+	bundle exec jekyll build --trace $(extra) --config _config.yml,_config.local.yml
 
 build: _site
 

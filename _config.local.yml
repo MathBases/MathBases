@@ -1,0 +1,6 @@
+# _config.yml overrides for use in local development only, not when building on
+# Github for production
+
+#
+remote_theme: false
+theme: minimal-mistakes-jekyll

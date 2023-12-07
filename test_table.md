@@ -11,13 +11,13 @@ tableid: test
         </tr>
     </thead>
     <tbody>
-        {% assign sorted = site.databases | sort: "name" %}
+        {% assign sorted = site.databases | sort: "title" %}
         {% for p in sorted %}
             {% unless p.private %}
             <tr>
                 <td>
                 <a href="{{p.url}}" target="_blank">
-                    {{p.name}}
+                    {{p.title}}
                 </a>
                 </td>
                 <td>

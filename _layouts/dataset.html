@@ -2,4 +2,8 @@
 layout: single
 ---
 
+{% for a in page.authors %}
+{{a.name}}<br>
+{% endfor %}
+
 {{ content }}

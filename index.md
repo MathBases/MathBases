@@ -1,14 +1,14 @@
 <a href="/test_table" class="btn btn--x-large btn--success">Table View →</a>
 
 <ul>
-  {% assign sorted = site.databases | sort: "name" %}
+  {% assign sorted = site.databases | sort: "title" %}
   {% for p in sorted %}
     {% unless p.private %}
     <li>
       <div>
         <h4>
           <a href="{{p.url}}" target="_blank">
-            {{p.name}}
+            {{p.title}}
           </a>
         </h4>
         {% for badge_id in p.badges %}

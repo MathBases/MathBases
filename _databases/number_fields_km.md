@@ -1,5 +1,4 @@
 ---
-layout: post
 id: number_fields_km
 name: A Database for Number Fields
 location: http://galoisdb.math.upb.de/

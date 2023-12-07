@@ -1,5 +1,4 @@
 ---
-layout: post
 id: matroids
 name: Database of Matroids
 location: http://www-imai.is.s.u-tokyo.ac.jp/~ymatsu/matroid/index.html

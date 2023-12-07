@@ -1,5 +1,4 @@
 ---
-layout: post
 id: ame_states
 name: Table of AME states
 location: http://www.ametable.net

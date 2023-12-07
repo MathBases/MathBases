@@ -1,5 +1,4 @@
 ---
-layout: post
 id: s_unit_groups_orders
 name: (S-)Unit Groups of Orders
 location: http://www.math.rwth-aachen.de/~Gabriele.Nebe/UnitGroupsOfOrders/

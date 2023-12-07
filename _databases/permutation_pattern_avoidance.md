@@ -1,5 +1,4 @@
 ---
-layout: post
 id: permutation_pattern_avoidance
 name: Database of Permutation Pattern Avoidance
 location: https://math.depaul.edu/bridget/patterns.html

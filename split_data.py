@@ -124,7 +124,6 @@ def write_records():
     for id, rec in zip(ids, records):
         with open(f"_databases/{id}.md", "w") as F:
             yml = f"""---
-layout: post
 id: {id}
 name: {rec['name']}
 """

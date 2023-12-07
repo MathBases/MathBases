@@ -1,5 +1,4 @@
 ---
-layout: post
 id: smallcategories
 name: SmallCategories
 location: https://smallcats.info/

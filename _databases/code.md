@@ -1,5 +1,4 @@
 ---
-layout: post
 id: code
 name: Code Tables
 location: http://www.codetables.de/

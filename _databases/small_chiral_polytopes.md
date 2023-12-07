@@ -1,5 +1,4 @@
 ---
-layout: post
 id: small_chiral_polytopes
 name: The Atlas of Small Chiral Polytopes
 location: http://www.abstract-polytopes.com/chiral/

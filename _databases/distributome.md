@@ -1,5 +1,4 @@
 ---
-layout: post
 id: distributome
 name: Distributome
 location: http://www.distributome.org/

@@ -1,5 +1,4 @@
 ---
-layout: post
 id: knot_invariants
 name: Table of Knot Invariants
 location: http://www.indiana.edu/~knotinfo/

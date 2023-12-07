@@ -1,5 +1,4 @@
 ---
-layout: post
 id: atlas_graphs
 name: An Atlas of Graphs
 location: https://zbmath.org/?q=an%3A1080.05001

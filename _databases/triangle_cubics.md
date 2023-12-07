@@ -1,5 +1,4 @@
 ---
-layout: post
 id: triangle_cubics
 name: Catalogue of Triangle Cubics
 location: http://bernard.gibert.pagesperso-orange.fr/ctc.html

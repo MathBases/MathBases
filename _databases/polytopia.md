@@ -1,5 +1,4 @@
 ---
-layout: post
 id: polytopia
 name: Polytopia
 location: https://www.polytopia.eu/en/

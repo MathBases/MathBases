@@ -1,5 +1,4 @@
 ---
-layout: post
 id: small_groups
 name: The Small Groups library
 location: http://www.icm.tu-bs.de/ag_algebra/software/small/

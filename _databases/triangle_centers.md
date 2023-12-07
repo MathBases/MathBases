@@ -1,5 +1,4 @@
 ---
-layout: post
 id: triangle_centers
 name: Encyclopedia of Triangle Centers
 location: http://faculty.evansville.edu/ck6/encyclopedia/ETC.html

@@ -1,5 +1,4 @@
 ---
-layout: post
 id: polygon_geometry
 name: Encyclopedia of Polygon Geometry
 location: https://chrisvantienhoven.nl/mathematics/encyclopedia-of-poly-geometry

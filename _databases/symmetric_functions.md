@@ -1,5 +1,4 @@
 ---
-layout: post
 id: symmetric_functions
 name: The symmetric functions catalog
 location: https://www2.math.upenn.edu/~peal/polynomials/polynomialindex.htm

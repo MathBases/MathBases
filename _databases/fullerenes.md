@@ -1,5 +1,4 @@
 ---
-layout: post
 id: fullerenes
 name: An atlas of fullerenes
 authors:

@@ -1,5 +1,4 @@
 ---
-layout: post
 id: abstract_regular_polytopes_small
 name: An Atlas of Abstract Regular Polytopes for Small Almost Simple Groups
 location: https://www.math.auckland.ac.nz/~dleemans/polytopes/

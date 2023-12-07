@@ -1,5 +1,4 @@
 ---
-layout: post
 id: arg
 name: ARG Database
 location: https://mivia.unisa.it/datasets/graph-database/arg-database/

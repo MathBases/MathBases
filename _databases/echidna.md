@@ -1,5 +1,4 @@
 ---
-layout: post
 id: echidna
 name: Echidna Databases
 location: http://iml.univ-mrs.fr/~kohel/dbs/

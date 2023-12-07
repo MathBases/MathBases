@@ -1,5 +1,4 @@
 ---
-layout: post
 id: edge_transitive_tetravalent_graphs
 name: A Census of Edge-Transitive Tetravalent Graphs
 location: http://jan.ucc.nau.edu/~swilson/C4FullSite/index.html

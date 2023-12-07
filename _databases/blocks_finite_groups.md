@@ -1,5 +1,4 @@
 ---
-layout: post
 id: blocks_finite_groups
 name: Blocks of finite groups
 location: https://wiki.manchester.ac.uk/blocks/index.php/Main_Page

@@ -1,5 +1,4 @@
 ---
-layout: post
 id: chiral_polytopes_small_almost
 name: An Atlas of Chiral Polytopes for Small Almost Simple Groups
 location: http://homepages.ulb.ac.be/~dleemans/CHIRAL/index.html

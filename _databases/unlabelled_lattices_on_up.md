@@ -1,5 +1,4 @@
 ---
-layout: post
 id: unlabelled_lattices_on_up
 name: Catalogue of unlabelled lattices on up to 16 elements
 location: https://researchdata.ands.org.au/catalogue-unlabelled-lattices-16-elements/1355270

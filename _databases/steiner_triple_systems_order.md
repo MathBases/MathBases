@@ -1,5 +1,4 @@
 ---
-layout: post
 id: steiner_triple_systems_order
 name: Steiner Triple Systems of order 19
 location: http://pottonen.kapsi.fi/sts19/

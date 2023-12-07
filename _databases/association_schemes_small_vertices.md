@@ -1,5 +1,4 @@
 ---
-layout: post
 id: association_schemes_small_vertices
 name: Classification of association schemes with small vertices
 location: http://math.shinshu-u.ac.jp/~hanaki/as/

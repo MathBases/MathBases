@@ -1,5 +1,4 @@
 ---
-layout: post
 id: lattices
 name: A Catalogue of Lattices
 location: http://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/

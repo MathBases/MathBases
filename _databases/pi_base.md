@@ -1,5 +1,4 @@
 ---
-layout: post
 id: pi_base
 name: π-Base
 location: [https://topology.jdabbs.com](https://topology.pi-base.org/)

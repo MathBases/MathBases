@@ -1,5 +1,4 @@
 ---
-layout: post
 id: suitesparse_matrix_collection
 name: SuiteSparse Matrix Collection
 location: https://sparse.tamu.edu/

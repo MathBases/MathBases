@@ -1,5 +1,4 @@
 ---
-layout: post
 id: subgroup_lattices_finite_almost
 name: An Atlas of Subgroup Lattices of Finite Almost Simple Groups
 location: http://homepages.ulb.ac.be/~dleemans/atlaslat/

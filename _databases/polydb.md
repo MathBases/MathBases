@@ -1,5 +1,4 @@
 ---
-layout: post
 id: polydb
 name: polyDB
 location: https://polymake.org/doku.php/polydb

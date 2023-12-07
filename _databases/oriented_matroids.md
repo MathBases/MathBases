@@ -1,5 +1,4 @@
 ---
-layout: post
 id: oriented_matroids
 name: Homepage of Oriented Matroids
 location: http://www.om.math.ethz.ch/

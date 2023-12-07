@@ -1,5 +1,4 @@
 ---
-layout: post
 id: la_jolla_covering_repository
 name: La Jolla Covering Repository Tables
 location: http://ljcr.dmgordon.org/cover/table.html

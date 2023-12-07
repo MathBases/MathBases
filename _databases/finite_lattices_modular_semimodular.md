@@ -1,5 +1,4 @@
 ---
-layout: post
 id: finite_lattices_modular_semimodular
 name: Lists of finite lattices (modular, semimodular, graded and geometric)
 location: https://b2share.eudat.eu/records/dbb096da4e364b5e9e37b982431f41de

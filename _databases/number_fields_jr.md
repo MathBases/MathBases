@@ -1,5 +1,4 @@
 ---
-layout: post
 id: number_fields_jr
 name: Database of Number Fields
 location: https://hobbes.la.asu.edu/NFDB/

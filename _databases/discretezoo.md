@@ -1,5 +1,4 @@
 ---
-layout: post
 id: discretezoo
 name: DiscreteZOO
 location: https://github.com/discretezoo

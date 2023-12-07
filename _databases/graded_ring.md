@@ -1,5 +1,4 @@
 ---
-layout: post
 id: graded_ring
 name: Graded Ring Database
 location: http://www.grdb.co.uk/

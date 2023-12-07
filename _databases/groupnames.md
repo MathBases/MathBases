@@ -1,5 +1,4 @@
 ---
-layout: post
 id: groupnames
 name: Group​Names
 location: https://people.maths.bris.ac.uk/~matyd/GroupNames/

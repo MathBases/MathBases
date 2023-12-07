@@ -1,5 +1,4 @@
 ---
-layout: post
 id: finite_group_representations
 name: ATLAS of Finite Group Representations
 location: http://brauer.maths.qmul.ac.uk/Atlas/v3/

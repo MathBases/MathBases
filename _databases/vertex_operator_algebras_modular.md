@@ -1,5 +1,4 @@
 ---
-layout: post
 id: vertex_operator_algebras_modular
 name: The online database of Vertex Operator Algebras and Modular Categories
 location: https://www.math.ksu.edu/~gerald/voas/

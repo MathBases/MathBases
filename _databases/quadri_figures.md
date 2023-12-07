@@ -1,5 +1,4 @@
 ---
-layout: post
 id: quadri_figures
 name: An Encyclopedia of Quadri-Figures
 location: https://chrisvantienhoven.nl/mathematics/encyclopedia

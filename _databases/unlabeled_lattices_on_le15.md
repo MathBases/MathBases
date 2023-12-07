@@ -1,5 +1,4 @@
 ---
-layout: post
 id: unlabeled_lattices_on_le15
 name: Unlabeled lattices on <=15 nodes
 location: https://www.shsu.edu/mem037/Lattices.html

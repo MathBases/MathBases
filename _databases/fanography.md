@@ -1,5 +1,4 @@
 ---
-layout: post
 id: fanography
 name: Fanography
 location: https://fanography.pythonanywhere.com

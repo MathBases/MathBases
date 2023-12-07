@@ -1,5 +1,4 @@
 ---
-layout: post
 id: distanceregular_
 name: DistanceRegular.org
 location: http://www.distanceregular.org/

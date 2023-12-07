@@ -1,5 +1,4 @@
 ---
-layout: post
 id: small_regular_polytopes
 name: An Atlas of Small Regular Polytopes
 location: http://www.abstract-polytopes.com/atlas/index.html

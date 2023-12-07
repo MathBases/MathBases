@@ -1,5 +1,4 @@
 ---
-layout: post
 id: combinatorial_data_bm
 name: Combinatorial Data
 location: http://users.cecs.anu.edu.au/~bdm/data/

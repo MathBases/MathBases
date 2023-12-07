@@ -1,5 +1,4 @@
 ---
-layout: post
 id: linkinfo_table_link_invariants
 name: LinkInfo: Table of Link Invariants
 location: https://linkinfo.math.indiana.edu/index.php

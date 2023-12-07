@@ -1,5 +1,4 @@
 ---
-layout: post
 id: polytopes_derived_from_sporadic
 name: Polytopes Derived from Sporadic Simple Groups
 location: http://www.abstract-polytopes.com/sporpolys/

@@ -1,5 +1,4 @@
 ---
-layout: post
 id: calabi_yau_data
 name: Calabi-Yau data
 location: http://hep.itp.tuwien.ac.at/~kreuzer/CY/

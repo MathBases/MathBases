@@ -1,5 +1,4 @@
 ---
-layout: post
 id: ring_theory
 name: Database of Ring Theory
 location: http://ringtheory.herokuapp.com/

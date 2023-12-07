@@ -1,5 +1,4 @@
 ---
-layout: post
 id: toric_calabi_yau
 name: Toric Calabi-Yau Database
 location: http://www.rossealtman.com/index.html

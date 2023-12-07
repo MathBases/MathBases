@@ -1,6 +1,6 @@
 ---
 title: LMFDB
-name: LMFDB ...
+name: LMFDB
 url: www.lmfdb.org
 badges: [foo, bar]
 key: value

@@ -14,7 +14,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-title: MathDB
+title: MathBases
 description: A database of mathematical databases
 exclude:
   - "DATA.md"

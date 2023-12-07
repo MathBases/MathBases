@@ -2,9 +2,10 @@
 collections:
   databases:
     output: true
+    permalink: /:collection/:slug
 
 
-theme: jekyll-theme-slate
+theme: minimal-mistakes-jekyll
 title: MathDB
 description: A database of mathematical databases
 exclude:

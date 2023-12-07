@@ -1,5 +1,4 @@
-
-
+<a href="/test_table" class="btn btn--x-large btn--success">Table View →</a>
 
 <ul>
   {% assign sorted = site.databases | sort: "name" %}

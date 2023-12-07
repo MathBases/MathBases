@@ -46,7 +46,6 @@ layout: plain
                     {% endif %}
                 </td>
             </tr>
-            {% endunless %}
         {% endfor %}
     </tbody>
 </table>

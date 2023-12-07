@@ -31,6 +31,3 @@ github:
   - is_project_page: false
 show_downloads:
   false
-
-  # google_analytics: UA-145714554-1
-  # hostname: "beantheory.org"

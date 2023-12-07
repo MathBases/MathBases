@@ -2,7 +2,7 @@
 collections:
   databases:
     output: true
-    permalink: /:collection/:slug
+    permalink: /dataset/:name
 
 
 theme: minimal-mistakes-jekyll
@@ -17,7 +17,7 @@ defaults: # setting default variables for pages, e.g., layout
     scope:
       path: "_databases"
     values:
-      layout: "default"
+      layout: "dataset"
       # TODO: replace with "database"
 
 github:

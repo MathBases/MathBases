@@ -85,6 +85,7 @@ def get_id(name, website):
     trim = re.sub("<=", "le", name)
     trim = re.sub(".org", " ", trim)
     trim = re.sub("π", "pi", trim)
+    trim = re.sub(" - ", " ", trim)
     trim = re.sub("-", "_", trim)
     trim = re.sub("[^a-z0-9_ ]", "", trim)
     while "  " in trim:

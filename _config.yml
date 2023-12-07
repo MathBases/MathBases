@@ -3,7 +3,17 @@ collections:
     output: true
     permalink: /dataset/:name
 
+# See https://github.com/mmistakes/minimal-mistakes/issues/1875
+# for configuring minimal-mistakes theme
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
 title: MathDB
 description: A database of mathematical databases
 exclude:

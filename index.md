@@ -1,25 +1,30 @@
-<a href="/test_table" class="btn btn--x-large btn--success">Table View →</a>
+---
+layout: table
+tableid: maintable
+---
 
-<ul>
-  {% assign sorted = site.databases | sort: "title" %}
-  {% for p in sorted %}
-    {% unless p.private %}
-    <li>
-      <div>
-        <h4>
-          <a href="{{p.url}}" target="_blank">
-            {{p.title}}
-          </a>
-        </h4>
-        {% for badge_id in p.badges %}
-          {% assign badge = site.data.badges[badge_id] %}
-          <img src="{{badge.img}}" alt="{{badge.name}} : {{badge.description}}" width=100 height=100>
+<table id="maintable" class="display">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% assign sorted = site.databases | sort: "title" %}
+        {% for p in sorted %}
+            {% unless p.private %}
+            <tr>
+                <td>
+                <a href="{{p.url}}" target="_blank">
+                    {{p.title}}
+                </a>
+                </td>
+                <td>
+                    {{p.id}}
+                </td>
+            </tr>
+            {% endunless %}
         {% endfor %}
-        <p>
-          {{ p.content | markdownify }}
-        </p>
-      </div>
-    </li>
-    {% endunless %}
-  {% endfor %}
-</ul>
+    </tbody>
+</table>

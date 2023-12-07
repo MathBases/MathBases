@@ -2,21 +2,45 @@
     <thead>
         <tr>
             <th>Name</th>
-            <th>ID</th>
+            <th>References</th>
+            <th>Area</th>
+            <th>Tags</th>
         </tr>
     </thead>
     <tbody>
         {% assign sorted = site.databases | sort: "title" %}
         {% for p in sorted %}
             {% unless p.private %}
+            <!-- TODO: convert to tablerow? https://shopify.github.io/liquid/tags/iteration/ -->
             <tr>
                 <td>
-                <a href="{{p.url}}" target="_blank">
-                    {{p.title}}
-                </a>
+                    <a href="{{ p.location }}" target="_blank">
+                        {{ p.title }}
+                    </a>
+                    {% if p.authors %}
+                        {% assign authors = p.authors | map: "name" %}
+                        <p>{{ authors | join: ", " }}</p>
+                    {% endif %}
                 </td>
                 <td>
-                    {{p.id}}
+                    {% if p.references %}
+                        {% for ref_hash in p.references %}
+                            {% for r in ref_hash %}
+                                <a href="{{ r[1] }}">{{ r[0] }}</a>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if p.area %}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if p.tags %}
+                        {% for t in p.tags %}
+                            {{ t }}
+                        {% endfor %}
+                    {% endif %}
                 </td>
             </tr>
             {% endunless %}

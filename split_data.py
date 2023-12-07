@@ -66,17 +66,17 @@ def get_id(name, website):
     # Two disambiguations
     if name == "Combinatorial Data":
         if website == "http://users.monash.edu.au/~iwanless/data/":
-            return "combinatorial_data_iw"
+            return "combinatorial-data-iw"
         else:
-            return "combinatorial_data_bm"
+            return "combinatorial-data-bm"
     elif name == "A Database for Number Fields":
-        return "number_fields_km"
+        return "number-fields-km"
     elif name == "Database of Number Fields":
-        return "number_fields_jr"
+        return "number-fields-jr"
     elif name == "An Atlas of Graphs":
-        return "atlas_graphs"
+        return "atlas-graphs"
     elif name == "Encyclopedia of Graphs":
-        return "encyclopedia_graphs"
+        return "encyclopedia-graphs"
     elif name == "FindStat (The Combinatorial Statistic Finder)":
         return "findstat"
     elif name == "LMFDB, the database of L-functions, modular forms, and related objects":
@@ -86,8 +86,7 @@ def get_id(name, website):
     trim = re.sub(".org", " ", trim)
     trim = re.sub("π", "pi", trim)
     trim = re.sub(" - ", " ", trim)
-    trim = re.sub("-", "_", trim)
-    trim = re.sub("[^a-z0-9_ ]", "", trim)
+    trim = re.sub("[^a-z0-9- ]", "", trim)
     while "  " in trim:
         trim = re.sub("  ", " ", trim)
     trim = re.sub("the ", "", trim)
@@ -112,7 +111,7 @@ def get_id(name, website):
     trim = re.sub(" library$", "", trim)
     trim = re.sub(" tables?$", "", trim)
     trim = re.sub(" catalog(ue)?$", "", trim)
-    return "_".join(trim.split(" ")[:4])
+    return "-".join(trim.split(" ")[:4])
 
 def write_records():
     records = get_records()

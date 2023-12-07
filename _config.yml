@@ -20,6 +20,9 @@ exclude:
   - "DATA.md"
   - "split_data.py"
 
+# Nest link paths under /MathDB
+baseurl: /MathDB
+
 defaults: # setting default variables for pages, e.g., layout
   - scope:
       path: "_databases"

@@ -1,9 +1,4 @@
----
-layout: table
-tableid: maintable
----
-
-<table id="maintable" class="display">
+<table class="display datatable">
     <thead>
         <tr>
             <th>Name</th>

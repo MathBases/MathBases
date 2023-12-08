@@ -8,7 +8,7 @@ authors:
   name: Isabel Hubard
 id: small-chiral-polytopes
 location: http://www.abstract-polytopes.com/chiral/
-objects: 56
+num_objects: 56
 references:
 - web: https://amc-journal.eu/index.php/amc/article/view/204/192
 tags:

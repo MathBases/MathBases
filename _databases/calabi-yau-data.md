@@ -3,10 +3,10 @@ authors:
 - homepage: http://hep.itp.tuwien.ac.at/~kreuzer/
   name: Maximilian Kreuzer
 - name: Harald Skarke
-datasets: 6
 id: calabi-yau-data
 location: http://hep.itp.tuwien.ac.at/~kreuzer/CY/
-objects: 470000000
+num_datasets: 6
+num_objects: 470000000
 references:
 - arxiv: hep-th/0002240
 tags:

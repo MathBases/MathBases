@@ -6,7 +6,7 @@ authors:
   name: Gabriele Nebe
 id: lattices
 location: http://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/
-objects: 160000
+num_objects: 160000
 tags:
 - lattice
 title: A Catalogue of Lattices

@@ -4,10 +4,10 @@ authors:
   name: Gavin Brown
 - homepage: http://magma.maths.usyd.edu.au/~kasprzyk/
   name: Alexander Kasprzyk
-num_contributors: '14'
-num_datasets: 17
 id: graded-ring
 location: http://www.grdb.co.uk/
+num_contributors: 14
+num_datasets: 17
 tags:
 - graded ring
 title: Graded Ring Database

@@ -7,7 +7,7 @@ authors:
 id: pi-base
 location: https://topology.pi-base.org
 title: "\u03C0-Base"
-
+ascii_name: "pi-base"
 ---
 
 A community database of topological counterexamples

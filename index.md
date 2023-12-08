@@ -31,7 +31,12 @@ layout: plain
                     {% if p.references %}
                         {% for ref_hash in p.references %}
                             {% for r in ref_hash %}
-                                <a href="{{ r[1] }}">{{ r[0] }}</a>
+				{% if r[0]=='arxiv' %}
+	                                <a href="https://arxiv.org/abs/{{ r[1] }}" target="_blank">{{ r[0] }}</a>
+				{% endif %}
+				{% if r[0]!='arxiv' %}
+	                                <a href="{{ r[1] }}">{{ r[0] }}</a>
+				{% endif %}
                             {% endfor %}
                         {% endfor %}
                     {% endif %}

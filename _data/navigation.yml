@@ -1,0 +1,7 @@
+main:
+  - title: "Find"
+    url: /
+  - title: "Create"
+    url: /
+  - title: "Info"
+    url: /info

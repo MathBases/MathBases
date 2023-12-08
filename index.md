@@ -14,8 +14,6 @@ layout: home
     <tbody>
         {% assign sorted = site.databases | sort: "title" %}
         {% for p in sorted %}
-            {% unless p.private %}
-            <!-- TODO: convert to tablerow? https://shopify.github.io/liquid/tags/iteration/ -->
             <tr>
                 <td>
                     <a href="{{ p.location }}" target="_blank">

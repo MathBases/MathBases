@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: plain
 ---
 <h1 class="smallcaps">Index of Mathematical DataBases</h1>
 <table class="display datatable">

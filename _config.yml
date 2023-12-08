@@ -14,8 +14,8 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-title: MathDB
-description: A database of mathematical databases
+title: MathBases
+description: Of, by, and for mathematical databases
 exclude:
   - "DATA.md"
   - "split_data.py"
@@ -31,6 +31,3 @@ github:
   - is_project_page: false
 show_downloads:
   false
-
-  # google_analytics: UA-145714554-1
-  # hostname: "beantheory.org"

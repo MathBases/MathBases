@@ -1,3 +1,7 @@
+---
+layout: plain
+---
+<h1 class="smallcaps">Index of Mathematical DataBases</h1>
 <table class="display datatable">
     <thead>
         <tr>
@@ -10,12 +14,11 @@
     <tbody>
         {% assign sorted = site.databases | sort: "title" %}
         {% for p in sorted %}
-            {% unless p.private %}
-            <!-- TODO: convert to tablerow? https://shopify.github.io/liquid/tags/iteration/ -->
             <tr>
                 <td>
                     <a href="{{ p.location }}" target="_blank">
                         {{ p.title }}
+                        <i class="fas fa-external-link-alt"></i>
                     </a>
                     {% if p.authors %}
                         {% assign authors = p.authors | map: "name" %}

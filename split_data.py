@@ -128,11 +128,11 @@ def write_records():
         if "Website" in rec:
             yml["location"] = rec['Website']
         if "Number of objects" in rec:
-            yml["objects"] = int(rec['Number of objects'])
+            yml["num_objects"] = int(rec['Number of objects'])
         if "Number of datasets" in rec and rec["Number of datasets"] != "1":
-            yml["datasets"] = int(rec['Number of datasets'])
+            yml["num_datasets"] = int(rec['Number of datasets'])
         if "Number of contributors" in rec:
-            yml["contributors"] = rec['Number of contributors']
+            yml["num_contributors"] = rec['Number of contributors']
         # omit size for now
         # omit time to generate for now
         # skipping completeness for now

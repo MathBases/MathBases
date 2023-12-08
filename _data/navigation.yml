@@ -2,6 +2,6 @@ main:
   - title: "Find"
     url: /
   - title: "Create"
-    url: /
+    url: /create
   - title: "Info"
     url: /info

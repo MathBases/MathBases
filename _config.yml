@@ -1,7 +1,9 @@
 collections:
   databases:
     output: true
-    permalink: /dataset/:name
+    permalink: /d/:name
+  topics:
+    output: true
 
 # See https://github.com/mmistakes/minimal-mistakes/issues/1875
 # for configuring minimal-mistakes theme

@@ -4,7 +4,7 @@ authors:
   name: Gavin Brown
 - homepage: http://magma.maths.usyd.edu.au/~kasprzyk/
   name: Alexander Kasprzyk
-contributors: '14'
+num_contributors: '14'
 num_datasets: 17
 id: graded-ring
 location: http://www.grdb.co.uk/

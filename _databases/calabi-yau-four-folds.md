@@ -39,6 +39,4 @@ badges: # OPTIONAL, see _data/badges.yml for a list of valid badges
   - has_code # code that generates the data is available
 ---
 
----
-
 The basic classification of complete intersection Calabi-Yau four-folds, together with a computation of Euler numbers. Further data includes all Hodge numbers, Chern classes and elliptic fibrations.

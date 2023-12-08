@@ -5,6 +5,7 @@ layout: plain
 <table class="display datatable">
     <thead>
         <tr>
+            <th>Info</th>
             <th>Name</th>
             <th>References</th>
             <th>Area</th>
@@ -15,6 +16,7 @@ layout: plain
         {% assign sorted = site.databases | sort: "title" %}
         {% for p in sorted %}
             <tr>
+                <td><a href="{{ p.id }}">ⓘ</a></td>
                 <td>
                     <a href="{{ p.location }}" target="_blank">
                         {{ p.title }}

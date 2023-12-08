@@ -1,7 +1,7 @@
 ---
 authors:
 - name: Jukka Kohonen
-datasets: 6
+num_datasets: 6
 id: finite-lattices-modular-semimodular
 location: https://b2share.eudat.eu/records/dbb096da4e364b5e9e37b982431f41de
 num_objects: 17194000000

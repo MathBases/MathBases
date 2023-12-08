@@ -6,7 +6,7 @@ authors:
   name: Alexander Kasprzyk
 id: graded-ring
 location: http://www.grdb.co.uk/
-num_contributors: '14'
+num_contributors: 14
 num_datasets: 17
 tags:
 - graded ring

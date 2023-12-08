@@ -1,6 +1,6 @@
 ---
 id: unipotent-muffin-research-kitchen
-location: http://lie.math.okstate.edu/UMRK/UMRK.html
+location: http://umrk.dynns.com:800/UMRK/UMRK.html
 tags:
 - Lie algebra
 title: The Unipotent Muffin Research Kitchen

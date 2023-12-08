@@ -5,7 +5,7 @@ authors:
   name: Dimitri Leemans
 id: abstract-regular-polytopes-small
 location: https://www.math.auckland.ac.nz/~dleemans/polytopes/
-objects: 5354
+num_objects: 5354
 references:
 - doi: 10.1007/s00010-006-2843-9
 tags:

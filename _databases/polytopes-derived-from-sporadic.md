@@ -6,7 +6,7 @@ authors:
   name: Alexander Hulpke
 id: polytopes-derived-from-sporadic
 location: http://www.abstract-polytopes.com/sporpolys/
-objects: 6047
+num_objects: 6047
 references:
 - rg: 260908716_Polytopes_Derived_from_Sporadic_Simple_Groups
 tags:

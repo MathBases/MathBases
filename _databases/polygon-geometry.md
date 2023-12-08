@@ -3,7 +3,7 @@ authors:
 - name: Chris van Tienhoven
 id: polygon-geometry
 location: https://chrisvantienhoven.nl/mathematics/encyclopedia-of-poly-geometry
-objects: 15
+num_objects: 15
 references:
 - isbn: ISBN:9789082750027
 tags:

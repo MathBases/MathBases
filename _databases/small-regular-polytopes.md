@@ -4,7 +4,7 @@ authors:
   name: Michael Hartley
 id: small-regular-polytopes
 location: http://www.abstract-polytopes.com/atlas/index.html
-objects: 35974
+num_objects: 35974
 references:
 - doi: 10.1007/s10998-006-0028-x
 tags:

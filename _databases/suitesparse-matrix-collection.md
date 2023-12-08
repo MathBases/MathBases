@@ -8,7 +8,7 @@ authors:
   name: Scott Kolodziej
 id: suitesparse-matrix-collection
 location: https://sparse.tamu.edu/
-objects: 2833
+num_objects: 2833
 tags:
 - matrix
 title: SuiteSparse Matrix Collection

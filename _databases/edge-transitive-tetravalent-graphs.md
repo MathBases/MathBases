@@ -6,7 +6,7 @@ authors:
   name: Steve Wilson
 id: edge-transitive-tetravalent-graphs
 location: http://jan.ucc.nau.edu/~swilson/C4FullSite/index.html
-objects: 7364
+num_objects: 7364
 references:
 - arxiv: '1608.04158'
 tags:

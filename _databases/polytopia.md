@@ -1,7 +1,7 @@
 ---
 id: polytopia
 location: https://www.polytopia.eu/en/
-objects: 2907
+num_objects: 2907
 tags:
 - polyhedron
 - system (category)

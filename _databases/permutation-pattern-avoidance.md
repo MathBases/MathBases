@@ -4,7 +4,7 @@ authors:
   name: Bridget Tenner
 id: permutation-pattern-avoidance
 location: https://math.depaul.edu/bridget/patterns.html
-objects: 54
+num_objects: 54
 tags:
 - permutation pattern
 title: Database of Permutation Pattern Avoidance

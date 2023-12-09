@@ -35,7 +35,7 @@ badges: # OPTIONAL, see _data/badges.yml for a list of valid badges
   - citable
   - completeness_guarantee
   - content_documentation
-  - schema3 # schema description quality: 2/3
+  - schema2 # schema description quality: 3/3
   - has_code # code that generates the data is available
 ---
 

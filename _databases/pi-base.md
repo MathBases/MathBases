@@ -14,6 +14,8 @@ start_date: 2014
 accessible: true
 searchable: true
 short_description: A community database of topological counterexamples
+tags:
+- general topology
 ---
 
 A community database of topological counterexamples

@@ -1,20 +1,32 @@
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
     integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
     integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link rel="stylesheet" href="/assets/css/custom.css">
 
+<script async src="https://eu.umami.is/script.js" data-website-id="a53836cd-9eba-4c9a-bf5c-9243d05d421b"></script>
+
+<!-- DataTables stuff -->
+<link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+
 <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 
 <script>
     $(document).ready(function () {
-        let tables = new DataTable('table.datatable');
+        let tables = $('table.datatable');
+        for (t of tables) {
+            dt = new DataTable(t, {
+                "order": $(t).data('order-columns').map(n => [n, 'asc'])
+            });
+            dt.columns().every(function () {
+                if ($(this.header()).data('hide-column')) {
+                    this.visible(false);
+                }
+            });
+        }
     });
 </script>
-
-<script async src="https://eu.umami.is/script.js" data-website-id="a53836cd-9eba-4c9a-bf5c-9243d05d421b"></script>
+<!-- End DataTables stuff -->

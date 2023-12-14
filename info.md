@@ -10,6 +10,7 @@ MathBases.org brings together
 The site supersedes <a href="https://mathdb.mathhub.info/">MathDB</a> and is still under construction, but we welcome pull requests on <a href="https://github.com/MathBases/MathBases">Github</a>.
 ---
 
+* <a href="https://code4math.zulipchat.com/#narrow/stream/416464-MathBases">Chat with us on Zulip!</a>
 * <a href="mailto:info@mathbases.org">Email us!</a>
 * <a href="https://raw.githubusercontent.com/MathBases/MathBases/main/template.md">Template for additions</a>
 * <a href="policies.html">Policies</a>

@@ -11,6 +11,7 @@ layout: plain
             <th>References</th>
             <th>Area</th>
             <th>Tags</th>
+            <th data-hide-column="true">Description</th>
         </tr>
     </thead>
     <tbody>
@@ -66,6 +67,11 @@ layout: plain
                             {{ t }}
                         {% endfor %}
                     {% endif %}
+                </td>
+                <td>
+                  {%- if p.short_description -%}
+                    {{ p.short_description }}
+                  {%- endif -%}
                 </td>
             </tr>
         {% endfor %}

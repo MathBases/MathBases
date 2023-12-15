@@ -10,7 +10,7 @@ Files in the root directory:
 * configuration files: `Gemfile` (Gem dependencies), `Makefile`, `CNAME`, `.gitignore`, `_config.local.yml`, `_config.yml`,
 * content: `board.md`, `create.md`, `index.md`, `info.md`, `policies.md`,
 * database entry template: `template.md`,
-* deprecated: `DATA.md` (MathDB data in Markdown) and `split_data.py` (a script them to YAML).
+* deprecated: `DATA.md` (MathDB data in Markdown) and `split_data.py` (a script converting old data to YAML).
 
 ### Directories
 

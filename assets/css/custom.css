@@ -1,3 +1,13 @@
+a {    
+    border-bottom: 1px dotted;
+    text-decoration: none;
+}
+a:hover {    
+    border-bottom: 1px solid;
+    text-decoration: none;
+}
+.page__content a:not(.btn):hover { text-decoration: none; }
+
 .smallcaps {
     font-variant: small-caps;
 }
@@ -5,4 +15,16 @@
 .centered-td {
     text-align: center;
     vertical-align: middle;
+}
+ul.authors-list {
+    padding-left: 0;
+}
+ul.authors-list li {
+    display: inline;
+}
+ul.authors-list li:after {
+    content: ", ";
+}
+ul.authors-list li:last-child:after {
+    content: "";
 }

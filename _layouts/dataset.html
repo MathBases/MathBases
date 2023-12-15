@@ -2,8 +2,29 @@
 layout: single
 ---
 
-{% for a in page.authors %}
-{{a.name}}<br>
-{% endfor %}
+<p>
+    <a href="{{ page.location }}">dataset website 
+        <i class="fas fa-external-link-alt" title="link to website for {{ page.name }}"></i>
+    </a>
+{% if page.code_location %}
+    , <a href="{{ page.code_location }}">code repository
+        <i class="fas fa-external-link-alt" title="link to code repository for {{ page.name }}"></i>
+    </a>
+{% endif %}
+</p>
+
+{% if page.authors.size > 0 %}
+    <ul class="authors-list">
+    {% for a in page.authors %}
+        <li>
+            {% if a.homepage %}
+                <a href="{{ a.homepage }}">{{ a.name }} <i class="fas fa-external-link-alt" title="link to homepage for {{ a.name }}"></i></a>
+            {% else %}
+                {{ a.name }}
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
 
 {{ content }}

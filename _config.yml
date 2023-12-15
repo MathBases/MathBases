@@ -20,6 +20,7 @@ title: MathBases
 description: Of, by, and for mathematical databases
 exclude:
   - "DATA.md"
+  - "hack.md"
   - "split_data.py"
 
 defaults: # setting default variables for pages, e.g., layout

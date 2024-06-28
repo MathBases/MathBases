@@ -3,7 +3,7 @@ id: le-superficie-algebriche
 location: "https://superficie.info"
 title: "Le Superficie Algebriche"
 code_location: "https://github.com/superficie/superficie-algebriche"
-start_date: 1879 # TODO OPTIONAL, approximate year when the project started
+start_date: 2014
 accessible: true # TODO OPTIONAL, data can still be accessed at location above
 completeness: >
   We include all foo up to order 42

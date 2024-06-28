@@ -2,11 +2,6 @@
 id: le-superficie-algebriche
 location: "https://superficie.info"
 title: "Le Superficie Algebriche"
-license: "CC BY-SA 4.0" # TODO ENCOURAGED, the license under which the data may be used
-num_datasets: 4 # TODO OPTIONAL, number of collections of different objects; omit if equal to 1
-size: 87654321 # TODO OPTIONAL, the approximate size in bytes
-is_compressed: true # TODO OPTIONAL, whether the size refers to a compressed file
-generation_time: 99999 # TODO OPTIONAL, the approximate total time spent in generating the data in seconds on one CPU
 code_location: "https://github.com/superficie/superficie-algebriche"
 start_date: 1879 # TODO OPTIONAL, approximate year when the project started
 accessible: true # TODO OPTIONAL, data can still be accessed at location above

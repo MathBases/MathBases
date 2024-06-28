@@ -4,7 +4,7 @@ location: "https://superficie.info"
 title: "Le Superficie Algebriche"
 code_location: "https://github.com/superficie/superficie-algebriche"
 start_date: 2014
-accessible: true # TODO OPTIONAL, data can still be accessed at location above
+accessible: true
 completeness: >
   We include all minimal surfaces not of general type. In the case of surfaces of general type, there is a reasonable base collection, but there also still many entries missing.
 searchable: true

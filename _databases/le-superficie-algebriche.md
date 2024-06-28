@@ -20,9 +20,5 @@ badges:
   - downloadable
 ---
 
-This database contains the best work of Noether and Euler, in one corpus.
-
-Here are some examples of the amazing objects within:
-
-- All finite rings
-- All quadratic forms
+This database visualizes the classification of minimal smooth compact complex algebraic surfaces.
+For each entry we compute and display several invariants, such as Kodaira dimension, Chern numbers, irregularity, Betti numbers, the Hodge diamond, and more.

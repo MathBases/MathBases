@@ -6,8 +6,7 @@ code_location: "https://github.com/superficie/superficie-algebriche"
 start_date: 2014
 accessible: true # TODO OPTIONAL, data can still be accessed at location above
 completeness: >
-  We include all foo up to order 42
-  and all bar of order up to 5077 # OPTIONAL, a string describing the data's completeness, encouraged if it has the completeness_guarantee badge
+  We include all minimal surfaces not of general type. In the case of surfaces of general type, there is a reasonable base collection, but there also still many entries missing.
 searchable: true
 short_description: "A tool to visually study the geography of (minimal) complex algebraic smooth surfaces."
 contact_email: superficie.algebriche@gmail.com

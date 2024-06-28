@@ -15,18 +15,9 @@ authors:
     homepage: "https://pbelmans.ncag.info"
   - name: Johan Commelin
     homepage: https://math.commelin.net
-badges: # TODO OPTIONAL, keep the ones that apply
+badges:
   - collaborative
-  - has_license
   - downloadable
-  - citable
-  - completeness_guarantee
-  - cas_connection
-  - fm_connection
-  - content_documentation
-  - schema3 # schema description quality: 3/3
-  - has_labels
-  - has_code # code that generates the data is available
 ---
 
 This database contains the best work of Noether and Euler, in one corpus.

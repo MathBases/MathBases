@@ -15,14 +15,6 @@ authors:
     homepage: "https://pbelmans.ncag.info"
   - name: Johan Commelin
     homepage: https://math.commelin.net
-references: # TODO OPTIONAL, include as many as you like
-  - url: "https://other_databaase.com"
-  - doi: 10.0000/0000
-  - arxiv: 9999.54321
-  - mr: 123456
-  - paper: "Emmy Noether and Leonhard Euler.  The Best Paper.  Annals of Math 1 (1879) no 2. pp 1-16."
-  - issn: 12345678
-  - other: "Satellite imagery stored on Mars." # Please avoid; only use if none of the above are appropriate
 badges: # TODO OPTIONAL, keep the ones that apply
   - collaborative
   - has_license

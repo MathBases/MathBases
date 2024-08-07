@@ -8,6 +8,9 @@ MathBases.org brings together
 * resources for mathematicians interested in creating new mathematical databases
 
 The site supersedes <a href="https://mathdb.mathhub.info/">MathDB</a> and is still under construction, but we welcome pull requests on <a href="https://github.com/MathBases/MathBases">Github</a>.
+
+The MathBases project is part of the [code4math](https://code4math.org) community.
+
 ---
 
 * <a href="https://code4math.zulipchat.com/#narrow/stream/416464-MathBases">Chat with us on Zulip!</a>

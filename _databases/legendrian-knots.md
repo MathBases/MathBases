@@ -8,7 +8,7 @@ searchable: false # OPTIONAL, whether there is a search interface available at t
 contact_email: a.wu@bucknell.edu # OPTIONAL, contact email for the database
 ---
 
-This database is preliminary work on creating a database pf Legendrian knots
+This database is preliminary work on creating a database of Legendrian knots
 
 There is information on Legendrian knots with crossing numbers up to 16,
 and knots by (tb,r) with r >= 0.

@@ -1,9 +1,9 @@
 ---
 authors:
-- homepage: https://www2.math.upenn.edu/~peal/
+- homepage: https://www.symmetricfunctions.com
   name: Per Alexandersson
 id: symmetric-functions
-location: https://www2.math.upenn.edu/~peal/polynomials/polynomialindex.htm
+location: https://www.symmetricfunctions.com
 title: The symmetric functions catalog
 
 ---

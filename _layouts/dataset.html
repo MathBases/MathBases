@@ -7,9 +7,15 @@ layout: single
     <i class="fas fa-external-link-alt" title="link to website for {{ page.name }}"></i>
   </a>
 {%- if page.code_location -%}
+  {%- if page.code_location.first -%}
+    // a list of strings
+    , code repositories ({%- for c in page.code_location -%}<a href="{{ c }}">{{ forloop.index }} <i class="fas fa-external-link-alt" title="link to code repository {{ forloop.index }} for {{ page.name }}"></i></a>{%- endfor -%})
+  {%- else -%}
+    // a single string
   , <a href="{{ page.code_location }}">code repository
     <i class="fas fa-external-link-alt" title="link to code repository for {{ page.name }}"></i>
   </a>
+  {%- endif -%}
 {%- endif -%}
 </p>
 {%- if page.authors.size > 0 -%}

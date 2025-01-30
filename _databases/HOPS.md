@@ -17,3 +17,5 @@ tags:
 - graph
 - co.combinatorics (MO)
 ---
+
+A database in graph theory containing parameters, relevant graph classes, their relations, and sources which established the results.

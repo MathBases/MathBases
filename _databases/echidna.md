@@ -1,9 +1,9 @@
 ---
 authors:
-- homepage: http://iml.univ-mrs.fr/~kohel/
+- homepage: https://www.i2m.univ-amu.fr/perso/david.kohel/
   name: David Kohel
 id: echidna
-location: http://iml.univ-mrs.fr/~kohel/dbs/
+location: https://www.i2m.univ-amu.fr/perso/david.kohel/dbs/index.html
 title: Echidna Databases
 
 ---

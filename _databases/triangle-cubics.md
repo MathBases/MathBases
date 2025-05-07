@@ -1,9 +1,9 @@
 ---
 authors:
-- homepage: http://bernard.gibert.pagesperso-orange.fr/index.html
+- homepage: http://bernard-gibert.fr/
   name: Bernard Gibert
 id: triangle-cubics
-location: http://bernard.gibert.pagesperso-orange.fr/ctc.html
+location: http://bernard-gibert.fr/
 num_objects: 1090
 tags:
 - triangle cubic

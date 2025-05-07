@@ -6,6 +6,7 @@ authors:
 id: qaos-querying-algebraic-objects
 location: http://qaos.math.tu-berlin.de/cgi-bin/qaos/query.scm
 title: QaoS - Querying Algebraic Objects System
+accessible: false
 
 ---
 

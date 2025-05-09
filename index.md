@@ -52,6 +52,8 @@ layout: plain
                                     <a href="https://arxiv.org/abs/{{ r[1] }}" target="_blank">arXiv</a>
                                 {%- when "doi" -%}
                                     <a href="https://doi.org/{{ r[1] }}" target="_blank">DOI</a>
+                                {%- when "eprint" -%}
+                                    <a href="https://eprint.iacr.org/{{ r[1] }}" target="_blank">ePrint</a>
                                 {%- when "rg" -%}
                                     <a href="https://www.researchgate.net/publication/{{ r[1] }}" target="_blank">RG</a>
                                 {%- when "isbn" -%}

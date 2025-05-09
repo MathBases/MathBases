@@ -10,7 +10,12 @@ num_objects: 470000000
 references:
 - arxiv: hep-th/0002240
 tags:
-- manifold
+- manifolds
+- Calabi-Yau
+area:
+- combinatorics
+- algebraic geometry
+- differential geometry
 title: Calabi-Yau data
 
 ---

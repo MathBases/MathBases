@@ -1,11 +1,12 @@
 ---
 authors:
 - name: Chris van Tienhoven
+  homepage: https://chrisvantienhoven.nl/
 id: quadri-figures
 location: https://chrisvantienhoven.nl/mathematics/encyclopedia
 num_objects: 300
-references:
-- isbn: ISBN:9789082750010
+area:
+- metric geometry
 tags:
 - quadri-figure
 title: An Encyclopedia of Quadri-Figures

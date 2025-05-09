@@ -5,10 +5,13 @@ authors:
 - name: Adam Jackson
 - name: Courtney  Weir
 id: distanceregular-
-location: http://www.distanceregular.org/
+location: https://www.math.mun.ca/distanceregular/
+area:
+- combinatorics
 tags:
-- graph
+- graph theory
 title: DistanceRegular.org
+short_description: an online repository of distance-regular graphs
 
 ---
 

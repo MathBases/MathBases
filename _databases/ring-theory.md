@@ -5,6 +5,14 @@ authors:
 id: ring-theory
 location: http://ringtheory.herokuapp.com/
 title: Database of Ring Theory
+area:
+- commutative algebra
+- rings and algebras
+searchable: true
+license: MIT
+badges:
+- collaborative
+- has_license
 
 ---
 

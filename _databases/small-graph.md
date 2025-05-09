@@ -5,8 +5,10 @@ authors:
   email: jason@jasongrout.org
 id: small-graph
 location: https://github.com/jasongrout/graph_database
+area:
+- combinatorics
 tags:
-- graph
+- graph theory
 title: Small Graph Database
 
 ---

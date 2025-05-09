@@ -8,6 +8,8 @@ id: graded-ring
 location: http://www.grdb.co.uk/
 num_contributors: 14
 num_datasets: 17
+area:
+- algebraic geometry
 tags:
 - graded ring
 title: Graded Ring Database

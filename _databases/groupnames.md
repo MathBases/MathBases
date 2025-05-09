@@ -1,10 +1,12 @@
 ---
 id: groupnames
-location: https://people.maths.bris.ac.uk/~matyd/GroupNames/
-tags:
-- system (category)
-- gr.group-theory (MO)
-title: "Group\u200BNames"
+author:
+- name: Tim Dokchitser
+  homepage: http://www.maths.bris.ac.uk/~matyd/
+location: https://groupnames.org
+area:
+- group theory
+title: GroupNames
 
 ---
 

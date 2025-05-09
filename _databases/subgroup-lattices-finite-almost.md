@@ -7,10 +7,10 @@ id: subgroup-lattices-finite-almost
 location: http://homepages.ulb.ac.be/~dleemans/atlaslat/
 references:
 - doi: 10.26493/1855-3974.455.422
+area:
+- group theory
 tags:
-- lattice
-- dataset (category)
+- lattice (order)
 title: An Atlas of Subgroup Lattices of Finite Almost Simple Groups
 
 ---
-

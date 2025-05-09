@@ -11,9 +11,10 @@ searchable: false
 references:
   - paper: "Heitzig, J., Reinhold, J. Counting Finite Lattices. Algebra univers. 48, 43–53 (2002)"
     doi: 10.1007/PL00013837
+area:
+- combinatorics
 tags:
-- lattice
-- dataset (category)
+- lattice (order)
 title: Unlabeled lattices on <=15 nodes
 
 ---

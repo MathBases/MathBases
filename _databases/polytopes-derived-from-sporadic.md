@@ -8,10 +8,12 @@ id: polytopes-derived-from-sporadic
 location: http://www.abstract-polytopes.com/sporpolys/
 num_objects: 6047
 references:
-- rg: 260908716_Polytopes_Derived_from_Sporadic_Simple_Groups
+- doi:10.11575/cdm.v5i2.61945
+area:
+- metric geometry
+- group theory
 tags:
 - abstract polytope
-- dataset (category)
 title: Polytopes Derived from Sporadic Simple Groups
 
 ---

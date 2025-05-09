@@ -1,8 +1,10 @@
 ---
 id: arg
 location: https://mivia.unisa.it/datasets/graph-database/arg-database/
+area:
+- combinatorics
 tags:
-- graph
+- graph theory
 title: ARG Database
 
 ---

@@ -4,10 +4,13 @@ authors:
   name: Ben Spitz
 id: smallcategories
 location: https://smallcats.info/
-tags:
-- ct.category-theory (MO)
+area:
+- category theory
 title: SmallCategories
+license: The Unlicense
+badges:
+- has_license
 
 ---
 
-Produce, maintain, and make available a database of small finite categories which is useful and useable.
+The SmallCategories Project aims to build a useful, useable database of small finite categories.

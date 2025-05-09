@@ -13,9 +13,10 @@ authors:
     homepage: "https://vaclavblazej.github.io/"
 badges:
   - has_code
+area:
+- combinatorics
 tags:
-- graph
-- co.combinatorics (MO)
+- graph theory
 ---
 
 A database in graph theory containing parameters, relevant graph classes, their relations, and sources which established the results.

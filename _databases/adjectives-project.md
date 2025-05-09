@@ -15,6 +15,8 @@ authors:
     homepage: "https://jessetvogel.nl"
   - name: David Holmes
     homepage: "https://www.davidholmes.nl"
+area:
+- algebraic geometry
 badges:
   - collaborative
   - has_code

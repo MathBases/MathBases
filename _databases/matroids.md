@@ -11,9 +11,10 @@ id: matroids
 location: https://pypi.org/project/matroid-database/
 references:
 - doi: 10.1007/s00454-011-9388-y
+area:
+- combinatorics
 tags:
 - matroid
-- dataset (category)
 title: Database of Matroids
 
 ---

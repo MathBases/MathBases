@@ -9,10 +9,10 @@ location: http://jan.ucc.nau.edu/~swilson/C4FullSite/index.html
 num_objects: 7364
 references:
 - arxiv: '1608.04158'
+area:
+- combinatorics
 tags:
-- graph
-- co.combinatorics (MO)
-- dataset (category)
+- graph theory
 title: A Census of Edge-Transitive Tetravalent Graphs
 
 ---

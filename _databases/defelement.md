@@ -18,6 +18,8 @@ authors:
     homepage: "https://jsdokken.com/"
   - name: India Marsden
     email: marsden@maths.ox.ac.uk
+area:
+  - analysis of PDEs
 badges:
   - collaborative
   - has_license

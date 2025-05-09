@@ -5,6 +5,8 @@ authors:
 id: combinatorial-data-iw
 location: http://users.monash.edu.au/~iwanless/data/
 title: Combinatorial Data
+area:
+- combinatorics
 
 ---
 

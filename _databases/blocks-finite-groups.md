@@ -7,6 +7,8 @@ authors:
 id: blocks-finite-groups
 location: https://wiki.manchester.ac.uk/blocks/index.php/Main_Page
 title: Blocks of finite groups
+area:
+- group theory
 
 ---
 

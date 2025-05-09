@@ -20,9 +20,9 @@ authors: # OPTIONAL, can omit for large projects (in such case can include a sin
     homepage: "https://github.com/pitmonticone"
   - name: Shreyas Srinivas
     homepage: "https://github.com/Shreyas4991"
-tags: # OPTIONAL, see _data/tags.yml for a list of valid tags
-  - arXiv.GR
-badges: # OPTIONAL, see _data/badges.yml for a list of valid badges
+area:
+  - group theory
+badges:
   - collaborative
   - has_license
   - downloadable

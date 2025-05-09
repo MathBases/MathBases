@@ -16,15 +16,15 @@ a:hover {
     text-align: center;
     vertical-align: middle;
 }
-ul.authors-list {
+ul.authors-list, ul.reference-list {
     padding-left: 0;
 }
-ul.authors-list li {
+ul.authors-list li, ul.reference-list li {
     display: inline;
 }
-ul.authors-list li:after {
+ul.authors-list li:after, ul.reference-list li:after {
     content: ", ";
 }
-ul.authors-list li:last-child:after {
+ul.authors-list li:last-child:after, ul.reference-list li:last-child:after {
     content: "";
 }

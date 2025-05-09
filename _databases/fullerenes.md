@@ -6,8 +6,12 @@ authors:
   name: David Manolopoulos
 id: fullerenes
 references:
-- isbn: ISBN:9780198557876
+- isbn: 9780198557876
 title: An atlas of fullerenes
+area:
+- metric geometry
+tags:
+- polyhedra
 
 ---
 

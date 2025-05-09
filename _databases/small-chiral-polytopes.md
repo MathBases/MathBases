@@ -11,9 +11,11 @@ location: http://www.abstract-polytopes.com/chiral/
 num_objects: 56
 references:
 - web: https://amc-journal.eu/index.php/amc/article/view/204/192
+area:
+- metric geometry
+- group theory
 tags:
 - abstract polytope
-- dataset (category)
 title: The Atlas of Small Chiral Polytopes
 
 ---

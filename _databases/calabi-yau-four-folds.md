@@ -11,8 +11,8 @@ start_date: 2013
 accessible: true
 completeness: "The complete list of Calabi-Yau four-folds defined as complete intersections in products of projective spaces"
 searchable: false
-short_description: "The complete list of Calabi-Yau four-folds" # OPTIONAL, at most one sentence, delimit with quotation marks
-authors: # OPTIONAL, can omit for large projects (in such case can include a single "author" with a collaboration email/webpage)
+short_description: "The complete list of Calabi-Yau four-folds"
+authors:
   - name: Alexander Haupt
     homepage: https://www.math.uni-hamburg.de/home/haupt/
     email: alexander.haupt@uni-hamburg.de
@@ -22,13 +22,15 @@ authors: # OPTIONAL, can omit for large projects (in such case can include a sin
   - name: Andre Lukas
     homepage: "https://www.physics.ox.ac.uk/our-people/lukas"
     email: lukas@physics.ox.ac.uk
-references: # OPTIONAL, include as many as you like
+area:
+  - algebraic geometry
+  - mathematical physics
+tags:
+  - Calabi-Yau
+  - manifolds
+references:
   - arxiv: '1303.1832'
   - arxiv: '1405.2073'
-tags: # OPTIONAL, see _data/tags.yml for a list of valid tags
-  - arXiv
-  - website
-  - enumeration
 badges: # OPTIONAL, see _data/badges.yml for a list of valid badges
   - collaborative
   - downloadable

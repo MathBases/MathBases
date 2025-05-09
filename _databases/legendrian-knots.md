@@ -1,11 +1,24 @@
 ---
-# Fill in the content below, move into _databases folder
-id: legendrian-knots  # REQUIRED, SAME AS FILE NAME
-location: "https://www.math.lsu.edu/~knotatlas/legendrian/" # REQUIRED, can be url, issn, etc
-title: "Legendrian Knot Atlas" # REQUIRED, the display name
-accessible: true # OPTIONAL, data can still be accessed at location above
-searchable: false # OPTIONAL, whether there is a search interface available at the location provided above
-contact_email: a.wu@bucknell.edu # OPTIONAL, contact email for the database
+id: legendrian-knots
+location: "https://www.math.lsu.edu/~knotatlas/legendrian/"
+title: "Legendrian Knot Atlas"
+accessible: true
+searchable: false
+contact_email: a.wu@bucknell.edu
+area:
+- geometric topology
+tags:
+- knot theory
+authors:
+- name: N. Bhattacharyya
+- name: C. Cox
+- name: J. Murray
+- name: A. Pandikkadan
+- name: David Shea Vela-Vick
+  homepage: https://vela-vick.com/
+- name: Angela Wu
+  homepage: https://angelamath.com/
+
 ---
 
 This database is preliminary work on creating a database of Legendrian knots

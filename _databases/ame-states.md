@@ -9,6 +9,8 @@ location: http://www.ametable.net
 references:
 - doi: 10.1088/1751-8121/aaade5
 title: Table of AME states
+area:
+- mathematical physics
 
 ---
 

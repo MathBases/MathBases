@@ -18,6 +18,8 @@ authors:
 badges:
   - collaborative
   - downloadable
+area:
+- algebraic geometry
 ---
 
 This database visualizes the classification of minimal smooth compact complex algebraic surfaces.

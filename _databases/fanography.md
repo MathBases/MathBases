@@ -3,8 +3,10 @@ authors:
 - homepage: https://pbelmans.ncag.info
   name: Pieter Belmans
 id: fanography
-location: https://fanography.pythonanywhere.com
+location: https://www.fanography.info/
 title: Fanography
+area:
+- algebraic geometry
 
 ---
 

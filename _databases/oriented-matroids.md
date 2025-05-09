@@ -4,8 +4,10 @@ authors:
   homepage: https://finschi.com/math/
 id: oriented-matroids
 location: https://finschi.com/math/om/
+area:
+- combinatorics
 tags:
-- co.combinatorics (MO)
+- matroids
 title: Homepage of Oriented Matroids
 
 ---

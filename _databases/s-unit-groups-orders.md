@@ -19,10 +19,10 @@ code_location: http://www.math.rwth-aachen.de/~Gabriele.Nebe/UnitGroupsOfOrders/
 accessible: true
 searchable: false
 short_description: "A database of unit groups"
-tags:
-  - website
-  - group representation
-  - gr.group-theory (MO)
+area:
+- number theory
+- rings and algebras
+- group theory
 badges:
   - collaborative
   - downloadable

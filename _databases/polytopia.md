@@ -2,10 +2,10 @@
 id: polytopia
 location: https://www.polytopia.eu/en/
 num_objects: 2907
+area:
+- metric geometry
 tags:
 - polyhedron
-- system (category)
-- geometry (classification) (MO)
 title: Polytopia
 
 ---

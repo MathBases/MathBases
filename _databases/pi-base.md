@@ -2,7 +2,7 @@
 authors:
   - homepage: https://github.com/jamesdabbs
     name: James Dabbs
-  - homepage: https://github.com/stevenclontz
+  - homepage: https://clontz.org/
     name: Steven Clontz
 id: pi-base
 location: https://topology.pi-base.org
@@ -14,6 +14,9 @@ start_date: 2014
 accessible: true
 searchable: true
 short_description: A community database of topological counterexamples
+area:
+- general topology
+
 ---
 
 A community database of topological counterexamples

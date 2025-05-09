@@ -7,7 +7,12 @@ authors:
 - name: Hiroshi Yamauchi
 id: vertex-operator-algebras-modular
 location: https://www.math.ksu.edu/~gerald/voas/
+area:
+- operator algebras
+- category theory
+- linear algebra
 title: The online database of Vertex Operator Algebras and Modular Categories
+searchable: false
 
 ---
 

@@ -7,8 +7,10 @@ authors:
 id: lattices
 location: http://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/
 num_objects: 160000
+area:
+- linear algebra
 tags:
-- lattice
+- lattice (group)
 title: A Catalogue of Lattices
 
 ---

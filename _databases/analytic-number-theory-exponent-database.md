@@ -6,7 +6,7 @@ code_location: "https://github.com/teorth/expdb"
 title: "Analytic Number Theory Exponent Database (ANTEDB)"
 license: "Apache 2.0"
 start_date: 2024
-accessible: true # OPTIONAL, data can still be accessed at location above
+accessible: true
 short_description: "A living database of the known bounds and relations between exponents of interest in analytic number theory"
 authors:
   - name: Terence Tao
@@ -18,8 +18,8 @@ authors:
 references:
   - arxiv: 2501.16779
   - blog: https://terrytao.wordpress.com/2025/01/28/new-exponent-pairs-zero-density-estimates-and-zero-additive-energy-estimates-a-systematic-approach/
-tags: # OPTIONAL, see _data/tags.yml for a list of valid tags
-  - arXiv.NT
+area:
+  - number theory
 badges: # OPTIONAL, see _data/badges.yml for a list of valid badges
   - collaborative
   - has_license

@@ -1,6 +1,7 @@
 ---
 id: sunit-diophantine
 location: https://www.math.u-bordeaux.fr/~bmatschke/data/
+code_location: https://github.com/bmatschke/ec-data
 title: S-unit solutions to Diophantine equations
 searchable: false
 authors:

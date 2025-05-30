@@ -16,16 +16,28 @@ a:hover {
     text-align: center;
     vertical-align: middle;
 }
-ul.authors-list, ul.reference-list {
-    padding-left: 0;
+
+ul.reference-list, ul.area-list, ul.tag-list {
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+  white-space: nowrap;
 }
-ul.authors-list li, ul.reference-list li {
+ul.reference-list li, ul.area-list li, ul.tag-list li {
+  margin: 0;
+}
+
+ul.authors-list {
+  padding-left: 0;
+  margin: 8px 0 0 0;
+}
+ul.authors-list li {
     display: inline;
 }
-ul.authors-list li:after, ul.reference-list li:after {
+ul.authors-list li:after {
     content: ", ";
 }
-ul.authors-list li:last-child:after, ul.reference-list li:last-child:after {
+ul.authors-list li:last-child:after {
     content: "";
 }
 

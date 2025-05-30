@@ -1,7 +1,7 @@
 ---
 layout: plain
 ---
-<h1 class="smallcaps">Index of Mathematical DataBases</h1>
+<h1 class="smallcaps" id="imdb_title">Index of Mathematical DataBases</h1>
 <table class="display datatable" data-order-columns="[1]">
     <thead>
         <tr>

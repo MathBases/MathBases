@@ -8,7 +8,7 @@ a:hover {
 }
 .page__content a:not(.btn):hover { text-decoration: none; }
 
-.smallcaps {
+.smallcaps, .site-title {
     font-variant: small-caps;
 }
 
@@ -16,15 +16,58 @@ a:hover {
     text-align: center;
     vertical-align: middle;
 }
-ul.authors-list, ul.reference-list {
-    padding-left: 0;
+
+ul.reference-list, ul.area-list, ul.tag-list {
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+  white-space: nowrap;
 }
-ul.authors-list li, ul.reference-list li {
+ul.reference-list li, ul.area-list li, ul.tag-list li {
+  margin: 0;
+}
+
+ul.authors-list {
+  padding-left: 0;
+  margin: 8px 0 0 0;
+}
+ul.authors-list li {
     display: inline;
 }
-ul.authors-list li:after, ul.reference-list li:after {
+ul.authors-list li:after {
     content: ", ";
 }
-ul.authors-list li:last-child:after, ul.reference-list li:last-child:after {
+ul.authors-list li:last-child:after {
     content: "";
+}
+
+.greedy-nav {
+  background: #0a1045;
+}
+.masthead {
+  background: #0a1045;
+}
+#footer {
+  background: #0a1045;
+  color: #ffca76;
+}
+.greedy-nav a {
+  color: #ffca76;
+}
+.initial-content {
+  background: #fffcf7;
+}
+table.datatable thead {
+  background: #FBE6C5;
+  border-bottom: 2px solid #0a1045;
+}
+#main .dataTables_wrapper .dataTables_filter input, #main .dataTables_wrapper .dataTables_length select {
+  border: 1px solid #e2dae7;
+  background-color: #FBE6C5;
+}
+h1, h2 {
+  color: #0a1045;
+}
+.datatable a, .datatable a:visited, page__content a, page__content a:visited {
+  color: #3743a9;
 }

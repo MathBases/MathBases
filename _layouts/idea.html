@@ -1,0 +1,29 @@
+---
+layout: single
+---
+
+{%- if page.suggestors -%}
+  <p> Suggested by:
+    {%- for A in page.suggestors -%}
+      {% if forloop.index0 != 0 %}, {% endif %}
+      {%- if A.link -%}
+        <a href="{{ A.link }}">{{ A.name }}</a>
+      {%- else -%}
+        {{ A.name }}
+      {%- endif -%}
+    {%- endfor -%}
+  </p>
+{%- endif -%}
+
+{%- if page.source -%}
+  <p> See also: <a href="{{ page.source }}">source</a></p>
+{%- endif -%}
+
+<p>Area:
+  {%- for A in page.area -%}
+    {% if forloop.index0 != 0 %}, {% endif %}
+    {{ A }}
+  {% endfor %}
+</p>
+
+{{ content }}

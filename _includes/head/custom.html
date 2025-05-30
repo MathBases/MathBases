@@ -19,7 +19,18 @@
         let tables = $('table.datatable');
         for (t of tables) {
             dt = new DataTable(t, {
-                "order": $(t).data('order-columns').map(n => [n, 'asc'])
+              order: $(t).data('order-columns').map(n => [n, 'asc']),
+              language: {
+                search: '_INPUT_',
+                searchPlaceholder: 'Search...'
+              },
+              layout: {
+                topStart: null,
+                topEnd: 'search',
+                bottomStart: 'info',
+                bottomEnd: null
+              },
+              "paging": false
             });
             dt.columns().every(function () {
                 if ($(this.header()).data('hide-column')) {

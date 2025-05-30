@@ -1,6 +1,9 @@
 ---
 id: arg
 location: https://mivia.unisa.it/datasets/graph-database/arg-database/
+authors:
+- name: The MIVIA group
+  homepage: https://mivia.unisa.it/people/
 area:
 - combinatorics
 tags:

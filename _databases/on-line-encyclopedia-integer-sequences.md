@@ -1,6 +1,9 @@
 ---
 id: on-line-encyclopedia-integer-sequences
 location: https://oeis.org/
+authors:
+- name: The OEIS community
+  homepage: https://oeis.org/community.html
 num_objects: 383476
 area:
 - combinatorics

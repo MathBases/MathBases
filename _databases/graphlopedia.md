@@ -2,6 +2,18 @@
 id: graphlopedia
 location: http://graphlopedia.org
 title: Graphlopedia
+authors:
+- name: Kimberly Bautista
+- name: Aaron Bode
+- name: Riley Casper
+- name: Dien Dang
+- name: Nicholas Farn
+- name: Graham Kelley
+- name: Stanley Lai
+- name: Adharsh Ranganathan
+- name: Michael Trinh
+- name: Alex Tsun
+- name: Katrina Warner
 area:
 - combinatorics
 tags:

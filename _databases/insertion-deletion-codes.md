@@ -5,7 +5,7 @@ title: Optimal Insertion-Deletion Correcting Codes
 start_date: 2005
 authors:
   - name: Sheridan Houghten
-  - homepage: https://www.cosc.brocku.ca/~houghten/
+    homepage: https://www.cosc.brocku.ca/~houghten/
 area:
   - combinatorics
 tags:

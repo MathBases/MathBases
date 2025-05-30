@@ -1,6 +1,9 @@
 ---
 id: mivia-graphs
 location: https://mivia.unisa.it/datasets/graph-database/mivia2-graph-database/
+authors:
+- name: The MIVIA group
+  homepage: https://mivia.unisa.it/people/
 area:
 - combinatorics
 tags:

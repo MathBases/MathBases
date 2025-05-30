@@ -1,6 +1,9 @@
 ---
 id: lie-groups-representations
 location: http://www.liegroups.org/
+authors:
+- name: The Atlas project collaboration
+  homepage: http://www.liegroups.org/people/
 area:
 - group theory
 - representation theory

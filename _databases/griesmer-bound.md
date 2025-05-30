@@ -3,7 +3,7 @@ id: griesmer-bound
 location: https://mars39.lomo.jp/opu/griesmer.htm
 authors:
 - name: Tatsuya Maruta
-- homepage: http://mars39.lomo.jp/opu/
+  homepage: http://mars39.lomo.jp/opu/
 title: Griesmer Bound for Linear Codes over Finite Fields
 area:
 - combinatorics

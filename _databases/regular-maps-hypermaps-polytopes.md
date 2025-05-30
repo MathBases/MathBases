@@ -8,7 +8,6 @@ title: Lists of regular maps, hypermaps and polytopes, trivalent symmetric graph
   and surface actions
 area:
 - combinatorics
-accessible: false
 
 ---
 

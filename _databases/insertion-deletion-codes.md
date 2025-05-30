@@ -1,7 +1,7 @@
 ---
 id: insertion-deletion-codes
 location: https://www.cosc.brocku.ca/~houghten/insdel.html
-title: Optimal Edit-Metric Codes
+title: Optimal Insertion-Deletion Correcting Codes
 start_date: 2005
 authors:
   - name: Sheridan Houghten

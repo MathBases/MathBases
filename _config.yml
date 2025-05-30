@@ -2,12 +2,21 @@ collections:
   databases:
     output: true
     permalink: /d/:name
+  articles:
+    output: true
+    permalink: /a/:name
+  conferences:
+    output: true
+    permalink: /c/:name
+  ideas:
+    output: true
+    permalink: /i/:name
   topics:
     output: true
 
 # See https://github.com/mmistakes/minimal-mistakes/issues/1875
 # for configuring minimal-mistakes theme
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+remote_theme: "mmistakes/minimal-mistakes@4.27.1"
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -29,6 +38,18 @@ defaults: # setting default variables for pages, e.g., layout
     values:
       layout: "dataset"
       # TODO: replace with "database"
+  - scope:
+      path: "_conferences"
+    values:
+      layout: "conference"
+  - scope:
+      path: "_articles"
+    values:
+      layout: "article"
+  - scope:
+      path: "_ideas"
+    values:
+      layout: "idea"
 
 github:
   - is_project_page: false

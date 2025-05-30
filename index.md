@@ -5,7 +5,7 @@ layout: plain
 <table class="display datatable" data-order-columns="[1]">
     <thead>
         <tr>
-            <th>Info</th>
+            <th data-dt-order="disable">Info</th>
             <th data-hide-column="true">Ascii Name</th>
             <th>Name</th>
             <th>References</th>

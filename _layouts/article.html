@@ -1,0 +1,13 @@
+---
+layout: single
+---
+
+{%- if page.author != "stub" -%}
+<p>{%- if page.author_homepage -%}<a href="{{ page.author_homepage }}">{{ page.author }}</a>{%- else -%} {{ page.author }} {%- endif -%}</p>
+{%- endif -%}
+
+{{ content }}
+
+{%- if page.author == "stub" -%}
+<p style="font-style: italic;"> This page is a <a href="/stubs">stub</a>.  If you are interested in writing a better version, please contact an <a href="/board.html">editor</a> or submit a <a href="https://github.com/MathBases/MathBases/pulls">pull request</a>.</p>
+{%- endif -%}

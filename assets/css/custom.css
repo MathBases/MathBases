@@ -41,6 +41,13 @@ ul.authors-list li:last-child:after {
     content: "";
 }
 
+#imdb_title {
+  margin: 7px 0 3px 0;
+}
+.dataTables_wrapper {
+  margin-top: -40px;
+}
+
 .greedy-nav {
   background: #0a1045;
 }

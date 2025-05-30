@@ -69,16 +69,20 @@ layout: plain
                 </td>
                 <td>
                     {%- if p.area -%}
+                       <ul class="area-list">
                        {%- for a in p.area -%}
-                           {% if forloop.index0 != 0 %}, {% endif %} {{ a }}
+                           <li>{{ a }}</li>
                        {%- endfor -%}
+                       </ul>
                     {%- endif -%}
                 </td>
                 <td>
                     {%- if p.tags -%}
+                        <ul class="tag-list">
                         {%- for t in p.tags -%}
-                            {% if forloop.index0 != 0 %}, {% endif %} {{ t }}
+                            <li>{{ t }}</li>
                         {%- endfor -%}
+                        </ul>
                     {%- endif %}
                 </td>
                 <td>

@@ -2,6 +2,9 @@
 id: isgci
 location: https://www.graphclasses.org/
 title: Information System on Graph Classes and their Inclusions
+authors:
+- name: H.N. de Ridder et al.
+  homepage: https://www.graphclasses.org/about.html
 area:
 - combinatorics
 tags:

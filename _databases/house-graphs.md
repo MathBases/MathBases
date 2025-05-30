@@ -1,6 +1,14 @@
 ---
 id: house-graphs
 location: https://houseofgraphs.org/
+authors:
+- name: Gunnar Brinkmann
+- name: Kris Coolsaet
+- name: Jan Goedgebeur
+  homepage: https://people.cs.kuleuven.be/~jan.goedgebeur/
+- name: Hadrien Mélot
+  homepage: https://web.umons.ac.be/algo/en/hadrien-melot/
+- name: Gauvain Devillez
 area:
 - combinatorics
 tags:

@@ -1,6 +1,9 @@
 ---
 id: findstat
 location: http://www.findstat.org/
+authors:
+- name: The FindStat collaboration
+  homepage: https://www.findstat.org/Contributors/
 num_objects: 1345
 area:
 - combinatorics

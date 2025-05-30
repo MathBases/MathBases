@@ -1,6 +1,9 @@
 ---
 id: encyclopedia-graphs
 location: http://atlas.gregas.eu/
+authors:
+- name: Abelium d.o.o., Research & Development
+  homepage: http://www.abelium.eu/
 area:
 - combinatorics
 tags:

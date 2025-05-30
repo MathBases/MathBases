@@ -1,6 +1,8 @@
 ---
 id: symbolicdata-project
 location: https://symbolicdata.github.io/
+authors:
+- name: Hans-Gert Gräbe, Albert Heinle and others
 code_location: https://github.com/symbolicdata/
 title: The SymbolicData Project
 license: GNU Public License

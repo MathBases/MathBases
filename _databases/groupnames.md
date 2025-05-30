@@ -1,6 +1,6 @@
 ---
 id: groupnames
-author:
+authors:
 - name: Tim Dokchitser
   homepage: http://www.maths.bris.ac.uk/~matyd/
 location: https://groupnames.org

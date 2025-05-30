@@ -27,10 +27,14 @@ layout: plain
                     {%- endif -%}
                 </td>
                 <td>
+                    {%- if p.accessible != null and p.accessible == false -%}
+                    {{ p.title }} (no longer online)
+                    {%- else -%}
                     <a href="{{ p.location }}" target="_blank">
                         {{ p.title }}
                         <i class="fas fa-external-link-alt"></i>
                     </a>
+                    {%- endif -%}
                     {%- if p.authors -%}
                         {%- assign authors = p.authors -%}
                         <ul class="authors-list">

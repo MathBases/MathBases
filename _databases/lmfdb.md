@@ -1,6 +1,9 @@
 ---
 id: lmfdb
 location: http://www.lmfdb.org/
+authors:
+- name: The LMFDB collaboration
+  homepage: https://www.lmfdb.org/acknowledgment
 area:
 - number theory
 - algebraic geometry

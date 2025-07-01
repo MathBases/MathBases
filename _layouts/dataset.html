@@ -26,7 +26,7 @@ layout: single
         {{ a.name }}
       {%- endif -%}
       {%- if a.orcid -%}
-        <a href="{{ orcid }}">Orcid of {{ a.name }} <i class="fas fa-external-link-alt" title="link to ORCID for {{ a.name }}"></i></a>
+        <a href="{{ a.orcid }}">Orcid for {{ a.name }} <i class="fas fa-external-link-alt" title="link to ORCID for {{ a.name }}"></i></a>
       {%- endif -%}
     </li>
   {%- endfor -%}

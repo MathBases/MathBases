@@ -28,6 +28,7 @@ contact_email: info@my_favorite_database.org # OPTIONAL, contact email for the d
 authors: # OPTIONAL, can omit for large projects (in such case can include a single "author" with a collaboration email/webpage)
   - name: Emmy Noether
     homepage: "https://uni-goettingen.de/~enoether"
+    orcid: "https://orcid.org/0000-0001-2345-6789"
   - name: Leonhard Euler
     email: euler@unibas.ch
   - name: Nameless Undergrad

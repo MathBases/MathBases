@@ -1968,7 +1968,7 @@ N/A
 
 ## La Jolla Covering Repository Tables
 
-* Website: http://ljcr.dmgordon.org/cover/table.html
+* Website: https://www.dmgordon.org/cover/
 * Number of objects: N/A
 * Number of datasets: N/A
 * Number of contributors: N/A

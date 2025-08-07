@@ -3,7 +3,7 @@ authors:
 - homepage: https://www.dmgordon.org/
   name: Dan Gordon
 id: la-jolla-covering-repository
-location: http://ljcr.dmgordon.org/cover/table.html
+location: https://www.dmgordon.org/cover/
 area:
 - combinatorics
 tags:

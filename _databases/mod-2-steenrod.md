@@ -1,6 +1,6 @@
 ---
 id: mod-2-steenrod
-location: https://archive.sigma2.no/pages/public/datasetDetail.jsf?id=10.11582/2022.00015
+location: https://archive.sigma2.no/dataset/6C607443-E4CD-4959-9B53-2F6BD54443E2
 authors:
 - name: Robert Bruner
   homepage: http://www.rrb.wayne.edu/

@@ -22,7 +22,7 @@ authors:
     homepage: "https://people.math.osu.edu/mixon.23/"
 references:
   - arxiv: 1907.07848
-  - paper: "John Jasper, Emily J. King, and Dustin G. Mixon.  Game of Sloanes: best known packings in complex projective space.  Wavelets and Sparsity XVIII 11138 (2019) pp. 416-425."
+  - doi: 10.1117/12.2527956
 tags:
   - arXiv.MG
   - arXiv.FA

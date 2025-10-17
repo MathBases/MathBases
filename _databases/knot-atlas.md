@@ -2,7 +2,7 @@
 id: knot-atlas
 location: http://katlas.org/wiki/Main_Page
 authors:
-- name: Kim Morrsion
+- name: Kim Morrison
   homepage: https://tqft.net/
 - name: Dror Bar-Natan
   homepage: https://www.math.toronto.edu/drorbn/

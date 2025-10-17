@@ -2,16 +2,16 @@
 authors:
 - homepage: https://livingst.pages.iu.edu
   name: Charles Livingston
-- homepage: https://people.vcu.edu/~moorea14/
+- homepage: https://allisonhmoore.github.io
   name: Allison H. Moore
 id: knot-invariants
-location: http://www.indiana.edu/~knotinfo/
+location: https://knotinfo.org
 area:
 - geometric topology
 tags:
 - knot invariant
 - knot theory
-title: Table of Knot Invariants
+title: 'KnotInfo: Table of Knot Invariants'
 searchable: true
 badges:
 - collaborative

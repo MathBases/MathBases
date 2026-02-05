@@ -2,6 +2,24 @@
 
 To contribute dataset information, fill in `template.md`, rename based on the dataset title, place into `_databases`, and submit via a pull request.
 
+## Testing
+
+MathBases includes automated validation tests to ensure data quality and consistency. See [`TESTING.md`](TESTING.md) for detailed documentation.
+
+### Quick Test
+```bash
+./run_tests.sh
+```
+
+### Available Test Commands
+```bash
+rake test           # Run all tests
+rake test_yaml      # YAML validation only
+rake test_build     # Jekyll build test only
+```
+
+Tests validate YAML syntax, required fields, data consistency, and Jekyll build success.
+
 ## Directory/file structure
 
 Files in the root directory:

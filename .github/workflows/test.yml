@@ -1,0 +1,32 @@
+name: Validate Database Entries
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.2
+    
+    - name: Install dependencies
+      run: |
+        gem install bundler --user-install
+        export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"
+        export GEM_HOME=$HOME/.gem
+        bundle install
+    
+    - name: Run validation tests
+      run: |
+        export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"
+        export GEM_HOME=$HOME/.gem
+        ruby test_validation.rb

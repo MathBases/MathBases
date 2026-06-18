@@ -19,6 +19,8 @@ tags: # OPTIONAL, see _data/tags.yml for a list of valid tags
   - coding theory
   - website
   - enumeration
+references:
+  - arxiv: 2606.11484
 badges: # OPTIONAL, see _data/badges.yml for a list of valid badges
   - collaborative
   - downloadable

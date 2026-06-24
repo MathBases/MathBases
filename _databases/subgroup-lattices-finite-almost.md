@@ -4,7 +4,7 @@ authors:
   name: Dimitri Leemans
 - name: Thomas Connor
 id: subgroup-lattices-finite-almost
-location: http://homepages.ulb.ac.be/~dleemans/atlaslat/
+location: https://leemans.dimitri.web.ulb.be/atlaslat/
 references:
 - doi: 10.26493/1855-3974.455.422
 area:

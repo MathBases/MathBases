@@ -10,6 +10,7 @@ searchable: true
 short_description: Searchable database of fourth-order Calabi-Yau differential operators with their invariants, instanton numbers and Yukawa couplings.
 authors:
   - name: Duco van Straten
+    homepage: "https://www.agtz.mathematik.uni-mainz.de/algebraische-geometrie/van-straten/"
   - name: Pavel Metelitsyn
 tags:
   - calabi-yau

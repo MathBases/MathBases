@@ -1,7 +1,7 @@
 ---
 id: moduli-space-geometry
 location: "https://mgnbar.info/"
-title: "Mgnbar.info: the geometry of the moduli space of curves"
+title: The geometry of the moduli space of curves
 area:
   - algebraic geometry
 code_location: "https://github.com/pbelmans/mgnbar"

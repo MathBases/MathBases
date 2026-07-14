@@ -14,7 +14,9 @@ authors:
   - name: Henri Cohen
     homepage: "https://www.math.u-bordeaux.fr/~hecohen/"
   - name: Francisco Diaz y Diaz
+    homepage: "https://www.math.u-bordeaux.fr/~frdiazyd/"
   - name: Michel Olivier
+    homepage: "https://www.math.u-bordeaux.fr/~molivier/"
   - name: Karim Belabas
     homepage: "https://www.math.u-bordeaux.fr/~kbelabas/"
 tags:

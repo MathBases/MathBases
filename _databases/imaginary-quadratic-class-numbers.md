@@ -17,3 +17,5 @@ tags:
 ---
 
 A single-page compilation listing the imaginary quadratic fields of class number h for h = 1 through 7 and every odd h up to 23 — 629 fields in all — transcribed from the determinations of Arno, Arno-Robinson-Wheeler, Wagner, and Ribenboim. Depending on the section, fields are given by field discriminant or by squarefree d, as flagged on the page.
+
+This data is now subsumed by the LMFDB, whose number field database at https://www.lmfdb.org/NumberField/ contains all imaginary quadratic fields of class number up to 100 (following Watkins's determination).

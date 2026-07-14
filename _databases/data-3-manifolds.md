@@ -10,7 +10,9 @@ authors:
   - name: Carlo Petronio
     homepage: "https://people.dm.unipi.it/petronio/"
   - name: Bruno Martelli
+    homepage: "https://people.dm.unipi.it/martelli/"
   - name: Roberto Frigerio
+    homepage: "https://people.dm.unipi.it/frigerio/"
 references:
   - paper: B. Martelli, C. Petronio, Three-manifolds having complexity at most 9, Experimental Math. 10 (2001), 207-237
   - paper: R. Frigerio, B. Martelli, C. Petronio, Small hyperbolic 3-manifolds with geodesic boundary, Experiment. Math. 13 (2004), 171-184

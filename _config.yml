@@ -28,6 +28,11 @@ plugins:
 
 title: MathBases
 description: Of, by, and for mathematical databases
+url: "https://mathbases.org"
+# name-with-owner of the production repo. jekyll-github-metadata (loaded by the
+# github-pages gem) needs this to resolve site.github.*; GitHub's legacy builder
+# sets it automatically via PAGES_REPO_NWO, but our Actions build must state it.
+repository: "MathBases/MathBases"
 exclude:
   - "DATA.md"
   - "template.md"

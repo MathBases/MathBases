@@ -1,7 +1,7 @@
 ---
 id: elliptic-curves-prime-conductor
 location: "https://wstein.org/oisin/index.html"
-title: 310716 Elliptic Curves of Prime Conductor
+title: Elliptic Curves of Prime Conductor
 area:
   - number theory
 num_objects: 310716

@@ -24,6 +24,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-last-modified-at
 
 title: MathBases
 description: Of, by, and for mathematical databases

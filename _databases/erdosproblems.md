@@ -1,3 +1,4 @@
+---
 id: erdosproblems
 location: "https://www.erdosproblems.com/"
 title: "Erdős Problems database"
@@ -16,3 +17,4 @@ short_description: "A collaborative database of mathematical problems inspired b
 contact_email: erdosproblemsonline@gmail.com
 references:
   - url: "https://terrytao.wordpress.com/2025/08/31/a-crowdsourced-project-to-link-up-erdosproblems-com-to-the-oeis/"
+---

@@ -3,7 +3,7 @@ layout: plain
 ---
 <h1 class="smallcaps">Improving Mathbases</h1>
 
-We welcome contributions!  When possible, please submit a [pull request](https://docs.github.com/en/pull-requests) to our [Github repository](https://github.com/MathBases/MathBases), but you are also welcome to [open an issue](https://github.com/MathBases/MathBases/issues) or [contact us](contact).  Any contributions will be released under the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) license.
+We welcome contributions!  When possible, please submit a [pull request](https://docs.github.com/en/pull-requests) to our [Github repository](https://github.com/MathBases/MathBases), but you are also welcome to [open an issue](https://github.com/MathBases/MathBases/issues) or [contact us](contact).  Any contributions will be released under the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) license (see the repository [LICENSE](https://github.com/MathBases/MathBases/blob/main/LICENSE) file).
 
 ## Adding databases to the index
 

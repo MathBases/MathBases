@@ -17,5 +17,6 @@ Content on this site is licensed under the [CC BY-SA](https://creativecommons.or
 
 * <a href="https://code4math.zulipchat.com/#narrow/stream/416464-MathBases">Chat with us on Zulip!</a>
 * <a href="mailto:info@mathbases.org">Email us!</a>
+* <a href="https://github.com/MathBases/MathBases">View on GitHub</a>
 * <a href="policies.html">Policies</a>
 * <a href="board.html">Editorial board</a>

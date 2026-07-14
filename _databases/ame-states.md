@@ -14,4 +14,4 @@ area:
 
 ---
 
-able on the existence of absolutely maximally entangled states (AME) of n parties with D levels each.
+Table on the existence of absolutely maximally entangled states (AME) of n parties with D levels each.

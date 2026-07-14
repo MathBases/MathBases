@@ -1,3 +1,4 @@
+---
 id: woollymathematics
 location: "https://woollymathematics.com/"
 title: "Woolly Mathematics"
@@ -21,3 +22,4 @@ references:
   - url: "https://woollymathematics.com/faq"
   - url: "https://old.maa.org/press/periodicals/convergence/the-educational-times-database-building-a-database-of-etmq-problems-and-solutions-2010s"
   - doi: "10.1007/s00283-025-10467-1"
+---

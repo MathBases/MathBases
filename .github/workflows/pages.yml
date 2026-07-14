@@ -1,0 +1,71 @@
+# Builds the site with Jekyll and publishes it to GitHub Pages.
+#
+# This replaces GitHub's built-in ("legacy") Pages build. The legacy builder
+# only loads plugins on GitHub's allow-list, and jekyll-last-modified-at (which
+# gives every dataset page an accurate "Updated:" date from its last git commit)
+# is not on that list. The only way to use it is to build the site ourselves
+# here and deploy the result.
+#
+# ONE-TIME SETUP required in the repo settings once this file is on `live`:
+#   Settings -> Pages -> "Build and deployment" -> Source: "GitHub Actions".
+# Until that switch is made, the legacy build keeps running and the deploy job
+# below cannot publish.
+name: Deploy site to GitHub Pages
+
+on:
+  # `live` is the branch GitHub Pages deploys from, so a push to it (e.g.
+  # promoting `main` -> `live`) should rebuild and republish the site.
+  push:
+    branches:
+      - live
+  # Allow manual runs from the Actions tab.
+  workflow_dispatch:
+
+# Permissions needed for actions/deploy-pages to publish.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one deployment at a time and let an in-progress deploy finish rather
+# than cancelling it (avoids publishing a half-built site).
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Full history (not a shallow clone) so jekyll-last-modified-at can
+          # read each file's last commit date. With the default fetch-depth of
+          # 1, every "Updated:" date would collapse to the checkout time again.
+          fetch-depth: 0
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

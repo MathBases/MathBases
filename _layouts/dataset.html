@@ -2,35 +2,113 @@
 layout: single
 ---
 
-<p>
-  <a href="{{ page.location }}">dataset website
-    <i class="fas fa-external-link-alt" title="link to website for {{ page.name }}"></i>
-  </a>
-{%- if page.code_location -%}
-  {%- if page.code_location.first -%}
-    , code repositories ({%- for c in page.code_location -%}<a href="{{ c }}">{{ forloop.index }} <i class="fas fa-external-link-alt" title="link to code repository {{ forloop.index }} for {{ page.name }}"></i></a>{%- endfor -%})
-  {%- else -%}
-  , <a href="{{ page.code_location }}">code repository
-    <i class="fas fa-external-link-alt" title="link to code repository for {{ page.name }}"></i>
-  </a>
-  {%- endif -%}
-{%- endif -%}
-</p>
+{%- comment -%}
+  Dataset homepage. Surfaces the fields documented in template.md; every block is
+  conditional so sparse entries stay clean. The lead and byline span the top; a
+  right-hand "at a glance" card holds the access links, key facts and badges, and
+  the description flows beside it.
+{%- endcomment -%}
+
+{%- if page.short_description -%}<p class="ds-lead">{{ page.short_description }}</p>{%- endif -%}
+
 {%- if page.authors.size > 0 -%}
-  <ul class="authors-list">
-  {%- for a in page.authors -%}
-    <li>
-      {%- if a.homepage -%}
-        <a href="{{ a.homepage }}">{{ a.name }} <i class="fas fa-external-link-alt" title="link to homepage for {{ a.name }}"></i></a>
-      {%- else -%}
-        {{ a.name }}
-      {%- endif -%}
-      {%- if a.orcid -%}
-        (<a href="{{ a.orcid }}">Orcid for {{ a.name }} <i class="fab fa-orcid" title="link to ORCID for {{ a.name }}"></i></a>)
-      {%- endif -%}
-    </li>
-  {%- endfor -%}
-  </ul>
+  <p class="ds-byline">
+    {%- for a in page.authors -%}
+      {%- if a.homepage -%}<a href="{{ a.homepage }}">{{ a.name }}</a>{%- else -%}{{ a.name | default: a }}{%- endif -%}
+      {%- if a.orcid %}&#8202;<a class="ds-orcid" href="{{ a.orcid }}" title="ORCID record for {{ a.name }}"><i class="fab fa-orcid" aria-hidden="true"></i></a>{% endif -%}
+      {%- if a.email %}&#8202;<a href="mailto:{{ a.email }}" title="email {{ a.name }}"><i class="fas fa-envelope" aria-hidden="true"></i></a>{% endif -%}
+      {%- unless forloop.last %}, {% endunless -%}
+    {%- endfor -%}
+  </p>
 {%- endif -%}
 
+<aside class="ds-card">
+  <div class="ds-access">
+    {%- if page.accessible == false -%}
+      <p class="ds-offline"><i class="fas fa-fw fa-circle-xmark" aria-hidden="true"></i> No longer online</p>
+      {%- if page.location -%}<p class="ds-access-note">was <a href="{{ page.location }}" rel="nofollow">{{ page.location }}</a></p>{%- endif -%}
+    {%- elsif page.location -%}
+      <a class="ds-visit" href="{{ page.location }}">Visit database <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+      {%- if page.searchable -%}<p class="ds-access-note"><i class="fas fa-fw fa-magnifying-glass" aria-hidden="true"></i> searchable online</p>{%- endif -%}
+    {%- endif -%}
+    {%- if page.code_location -%}
+      {%- if page.code_location.first -%}
+        {%- for c in page.code_location -%}<p class="ds-access-note"><a href="{{ c }}"><i class="fas fa-fw fa-code" aria-hidden="true"></i> source code{% if page.code_location.size > 1 %} ({{ forloop.index }}){% endif %}</a></p>{%- endfor -%}
+      {%- else -%}
+        <p class="ds-access-note"><a href="{{ page.code_location }}"><i class="fas fa-fw fa-code" aria-hidden="true"></i> source code</a></p>
+      {%- endif -%}
+    {%- endif -%}
+    {%- if page.contact_email -%}
+      <p class="ds-access-note"><a href="mailto:{{ page.contact_email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> contact</a></p>
+    {%- endif -%}
+  </div>
+
+  <dl class="ds-facts">
+    {%- if page.area.size > 0 -%}
+      <dt>{% if page.area.size == 1 %}Area{% else %}Areas{% endif %}</dt>
+      <dd class="ds-chips">{% for a in page.area %}<span class="ds-chip">{{ a }}</span>{% endfor %}</dd>
+    {%- endif -%}
+    {%- if page.tags.size > 0 -%}
+      <dt>Tags</dt>
+      <dd class="ds-chips">{% for t in page.tags %}<span class="ds-chip ds-chip--tag">{{ t }}</span>{% endfor %}</dd>
+    {%- endif -%}
+    {%- if page.num_objects -%}<dt>Objects</dt><dd>{% include thousands.html n=page.num_objects %}</dd>{%- endif -%}
+    {%- if page.num_datasets -%}<dt>Sub-datasets</dt><dd>{{ page.num_datasets }}</dd>{%- endif -%}
+    {%- if page.size -%}
+      <dt>Size</dt>
+      <dd>
+        {%- assign b = page.size -%}
+        {%- if b >= 1000000000000 -%}{{ b | divided_by: 1000000000000.0 | round: 2 }} TB
+        {%- elsif b >= 1000000000 -%}{{ b | divided_by: 1000000000.0 | round: 2 }} GB
+        {%- elsif b >= 1000000 -%}{{ b | divided_by: 1000000.0 | round: 1 }} MB
+        {%- elsif b >= 1000 -%}{{ b | divided_by: 1000.0 | round: 1 }} KB
+        {%- else -%}{{ b }} bytes{%- endif -%}
+        {%- if page.is_compressed %} (compressed){% endif -%}
+      </dd>
+    {%- endif -%}
+    {%- if page.start_date or page.end_date -%}
+      <dt>Active</dt>
+      <dd>{% if page.start_date %}{{ page.start_date }}{% else %}?{% endif %}{% if page.end_date %}&ndash;{{ page.end_date }}{% elsif page.start_date %}&ndash;present{% endif %}</dd>
+    {%- endif -%}
+    {%- assign ncontrib = page.num_contributors | default: page.contributors -%}
+    {%- if ncontrib -%}<dt>Contributors</dt><dd>{% include thousands.html n=ncontrib %}</dd>{%- endif -%}
+    {%- if page.license -%}<dt>License</dt><dd>{{ page.license }}</dd>{%- endif -%}
+    {%- if page.parent_dataset -%}<dt>Part of</dt><dd><a href="/d/{{ page.parent_dataset }}">{{ page.parent_dataset }}</a></dd>{%- endif -%}
+  </dl>
+
+  {%- if page.badges.size > 0 -%}
+    <div class="ds-badges" title="dataset badges">
+      {%- for badge in page.badges -%}<span class="ds-badge">{{ badge | replace: '_', ' ' }}</span>{%- endfor -%}
+    </div>
+  {%- endif -%}
+</aside>
+
+{%- if page.completeness -%}<p class="ds-completeness"><strong>Completeness.</strong> {{ page.completeness }}</p>{%- endif -%}
+
 {{ content }}
+
+{%- if page.references.size > 0 -%}
+  <section class="ds-section">
+    <h2 class="ds-h">References</h2>
+    <ul class="ds-references">
+      {%- for ref in page.references -%}
+        {%- for pair in ref -%}
+          {%- assign k = pair[0] -%}
+          {%- assign v = pair[1] -%}
+          <li>
+            {%- case k -%}
+              {%- when 'doi' -%}<a href="https://doi.org/{{ v }}">doi:{{ v }}</a>
+              {%- when 'arxiv' -%}<a href="https://arxiv.org/abs/{{ v }}">arXiv:{{ v }}</a>
+              {%- when 'eprint' -%}<a href="https://eprint.iacr.org/{{ v }}">ePrint {{ v }}</a>
+              {%- when 'mr' -%}<a href="https://mathscinet.ams.org/mathscinet-getitem?mr={{ v }}">MR {{ v }}</a>
+              {%- when 'isbn' -%}ISBN&nbsp;<a href="https://www.google.com/search?tbm=bks&q=isbn:{{ v }}">{{ v }}</a>
+              {%- when 'issn' -%}ISSN&nbsp;<a href="https://portal.issn.org/resource/ISSN/{{ v }}">{{ v }}</a>
+              {%- when 'url', 'web', 'blog' -%}<a href="{{ v }}">{{ v }}</a>
+              {%- else -%}{{ v }}
+            {%- endcase -%}
+          </li>
+        {%- endfor -%}
+      {%- endfor -%}
+    </ul>
+  </section>
+{%- endif -%}

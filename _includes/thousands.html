@@ -1,0 +1,8 @@
+{%- comment -%}Render include.n with thousands separators (Liquid has no number formatting).{%- endcomment -%}
+{%- assign _digits = include.n | append: '' | split: '' -%}
+{%- assign _len = _digits | size -%}
+{%- for _d in _digits -%}
+{%- assign _rem = _len | minus: forloop.index0 | modulo: 3 -%}
+{%- if forloop.index0 != 0 and _rem == 0 %},{% endif -%}
+{{- _d -}}
+{%- endfor -%}

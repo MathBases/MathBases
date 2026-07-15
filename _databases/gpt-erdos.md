@@ -1,3 +1,4 @@
+---
 id: gpt-erdos
 location: "https://www.ocf.berkeley.edu/~neel/erdos.html"
 title: "GPT-Erdos"

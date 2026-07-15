@@ -32,7 +32,7 @@ layout: plain
     <thead>
         <tr>
             <th data-dt-order="disable">Info</th>
-            <th data-hide-column="true">Ascii Name</th>
+            <th data-hide-column="true">Sort Key</th>
             <th>Name</th>
             <th>References</th>
             <th>Area</th>
@@ -41,17 +41,22 @@ layout: plain
         </tr>
     </thead>
     <tbody>
-        {%- assign sorted = site.databases | sort: "title" -%}
-        {%- for p in sorted -%}
+        {%- comment -%} Sort by the generated sort key (issue #75), which drops
+            leading articles and non-letters; fall back to the title. Liquid can't
+            attach the _data key to each record for a native sort, so build
+            "key@@@index" strings, sort them, and map back to site.databases. {%- endcomment -%}
+        {%- assign sort_pairs = "" -%}
+        {%- for p in site.databases -%}
+            {%- assign key = site.data.sort_keys[p.slug] | default: p.title | downcase -%}
+            {%- assign sort_pairs = sort_pairs | append: key | append: "@@@" | append: forloop.index0 | append: "|||" -%}
+        {%- endfor -%}
+        {%- assign sorted_pairs = sort_pairs | split: "|||" | sort -%}
+        {%- for pair in sorted_pairs -%}
+            {%- assign idx = pair | split: "@@@" | last | times: 1 -%}
+            {%- assign p = site.databases[idx] -%}
             <tr>
                 <td class="centered-td"><a href="{{ p.id }}"><i class="fas fa-info-circle"></i></a></td>
-                <td>
-                    {%- if p.ascii_name -%}
-                    {{ p.ascii_name }}
-                    {%- else -%}
-                    {{ p.title }}
-                    {%- endif -%}
-                </td>
+                <td>{{ site.data.sort_keys[p.slug] | default: p.title | downcase }}</td>
                 <td>
                     {%- if p.accessible != null and p.accessible == false -%}
                     {{ p.title }} (no longer online)

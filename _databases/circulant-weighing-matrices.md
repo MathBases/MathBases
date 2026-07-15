@@ -9,6 +9,8 @@ short_description: "Database of existence and nonexistence results for circulant
 authors:
   - name: Daniel M. Gordon
     homepage: "https://www.dmgordon.org/"
+references:
+  - doi: 10.5281/zenodo.10775927
 tags:
   - weighing matrices
   - combinatorial designs

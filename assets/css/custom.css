@@ -231,12 +231,13 @@ h1, h2 {
 .ds-byline { margin: 0 0 18px 0; color: #555; }
 .ds-orcid { color: #a6ce39; }
 
-/* "At a glance" card, floated beside the description on wide screens. */
+/* Two columns on wide screens: description left, "at a glance" card pinned right. */
+.ds-body { display: flex; gap: 26px; align-items: flex-start; }
+.ds-main { flex: 1 1 auto; min-width: 0; }
 .ds-card {
-  float: right;
-  width: 310px;
+  flex: 0 0 290px;
+  align-self: flex-start;
   max-width: 100%;
-  margin: 2px 0 18px 26px;
   padding: 14px 16px;
   background: #fffcf7;
   border: 1px solid #0a1045;
@@ -316,7 +317,7 @@ h1, h2 {
   border-radius: 0 3px 3px 0;
 }
 
-.ds-section { clear: right; margin-top: 26px; }
+.ds-section { margin-top: 26px; }
 .ds-h {
   font-size: 1.2em;
   border-bottom: 1px solid #e6dcc9;
@@ -326,6 +327,7 @@ h1, h2 {
 .ds-references { margin: 0 0 0 1.2em; }
 .ds-references li { margin: 4px 0; overflow-wrap: anywhere; }
 
-@media (max-width: 640px) {
-  .ds-card { float: none; width: auto; margin: 0 0 18px 0; }
+@media (max-width: 767px) {
+  .ds-body { flex-direction: column; }
+  .ds-card { flex-basis: auto; order: -1; margin-bottom: 18px; }
 }

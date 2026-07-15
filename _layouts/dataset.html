@@ -4,10 +4,13 @@ layout: single
 
 {%- comment -%}
   Dataset homepage. Surfaces the fields documented in template.md; every block is
-  conditional so sparse entries stay clean. The lead and byline span the top; a
-  right-hand "at a glance" card holds the access links, key facts and badges, and
-  the description flows beside it.
+  conditional so sparse entries stay clean. Two columns on wide screens: the
+  description on the left, an "at a glance" card pinned to the right (they stack
+  on narrow screens).
 {%- endcomment -%}
+
+<div class="ds-body">
+<div class="ds-main">
 
 {%- if page.short_description -%}<p class="ds-lead">{{ page.short_description }}</p>{%- endif -%}
 
@@ -21,6 +24,38 @@ layout: single
     {%- endfor -%}
   </p>
 {%- endif -%}
+
+{%- if page.completeness -%}<p class="ds-completeness"><strong>Completeness.</strong> {{ page.completeness }}</p>{%- endif -%}
+
+{{ content }}
+
+{%- if page.references.size > 0 -%}
+  <section class="ds-section">
+    <h2 class="ds-h">References</h2>
+    <ul class="ds-references">
+      {%- for ref in page.references -%}
+        {%- for pair in ref -%}
+          {%- assign k = pair[0] -%}
+          {%- assign v = pair[1] -%}
+          <li>
+            {%- case k -%}
+              {%- when 'doi' -%}<a href="https://doi.org/{{ v }}">doi:{{ v }}</a>
+              {%- when 'arxiv' -%}<a href="https://arxiv.org/abs/{{ v }}">arXiv:{{ v }}</a>
+              {%- when 'eprint' -%}<a href="https://eprint.iacr.org/{{ v }}">ePrint {{ v }}</a>
+              {%- when 'mr' -%}<a href="https://mathscinet.ams.org/mathscinet-getitem?mr={{ v }}">MR {{ v }}</a>
+              {%- when 'isbn' -%}ISBN&nbsp;<a href="https://www.google.com/search?tbm=bks&q=isbn:{{ v }}">{{ v }}</a>
+              {%- when 'issn' -%}ISSN&nbsp;<a href="https://portal.issn.org/resource/ISSN/{{ v }}">{{ v }}</a>
+              {%- when 'url', 'web', 'blog' -%}<a href="{{ v }}">{{ v }}</a>
+              {%- else -%}{{ v }}
+            {%- endcase -%}
+          </li>
+        {%- endfor -%}
+      {%- endfor -%}
+    </ul>
+  </section>
+{%- endif -%}
+
+</div>{%- comment -%} /.ds-main {%- endcomment -%}
 
 <aside class="ds-card">
   <div class="ds-access">
@@ -83,32 +118,4 @@ layout: single
   {%- endif -%}
 </aside>
 
-{%- if page.completeness -%}<p class="ds-completeness"><strong>Completeness.</strong> {{ page.completeness }}</p>{%- endif -%}
-
-{{ content }}
-
-{%- if page.references.size > 0 -%}
-  <section class="ds-section">
-    <h2 class="ds-h">References</h2>
-    <ul class="ds-references">
-      {%- for ref in page.references -%}
-        {%- for pair in ref -%}
-          {%- assign k = pair[0] -%}
-          {%- assign v = pair[1] -%}
-          <li>
-            {%- case k -%}
-              {%- when 'doi' -%}<a href="https://doi.org/{{ v }}">doi:{{ v }}</a>
-              {%- when 'arxiv' -%}<a href="https://arxiv.org/abs/{{ v }}">arXiv:{{ v }}</a>
-              {%- when 'eprint' -%}<a href="https://eprint.iacr.org/{{ v }}">ePrint {{ v }}</a>
-              {%- when 'mr' -%}<a href="https://mathscinet.ams.org/mathscinet-getitem?mr={{ v }}">MR {{ v }}</a>
-              {%- when 'isbn' -%}ISBN&nbsp;<a href="https://www.google.com/search?tbm=bks&q=isbn:{{ v }}">{{ v }}</a>
-              {%- when 'issn' -%}ISSN&nbsp;<a href="https://portal.issn.org/resource/ISSN/{{ v }}">{{ v }}</a>
-              {%- when 'url', 'web', 'blog' -%}<a href="{{ v }}">{{ v }}</a>
-              {%- else -%}{{ v }}
-            {%- endcase -%}
-          </li>
-        {%- endfor -%}
-      {%- endfor -%}
-    </ul>
-  </section>
-{%- endif -%}
+</div>{%- comment -%} /.ds-body {%- endcomment -%}

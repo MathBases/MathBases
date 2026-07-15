@@ -6,6 +6,7 @@ authors:
 - name: Kimberly Bautista
 - name: Aaron Bode
 - name: Riley Casper
+- name: Sharat Chandra
 - name: Dien Dang
 - name: Nicholas Farn
 - name: Graham Kelley
@@ -18,8 +19,6 @@ area:
 - combinatorics
 tags:
 - graph theory
-authors:
- - Sharat Chandra
 accessible: false
 
 ---

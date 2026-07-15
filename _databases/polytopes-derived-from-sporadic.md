@@ -8,7 +8,7 @@ id: polytopes-derived-from-sporadic
 location: http://www.abstract-polytopes.com/sporpolys/
 num_objects: 6047
 references:
-- doi:10.11575/cdm.v5i2.61945
+- doi: 10.11575/cdm.v5i2.61945
 area:
 - metric geometry
 - group theory

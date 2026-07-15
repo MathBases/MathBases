@@ -14,7 +14,8 @@ tags:
 - number fields
 title: Database of Number Fields
 searchable: true
+accessible: false
 
 ---
 
-An updated version of this database is available within the LMFDB at https://www.lmfdb.org/NumberField/
+This database is offline indefinitely. It may return in the future, but there is no timeline. Most of its number fields are available within the LMFDB at https://www.lmfdb.org/NumberField/

@@ -9,6 +9,8 @@ short_description: Parameter tables and known examples of (v,k,lambda)-differenc
 authors:
   - name: Daniel M. Gordon
     homepage: "https://www.dmgordon.org/"
+references:
+  - doi: 10.5281/zenodo.10775931
 tags:
   - difference sets
   - combinatorial designs

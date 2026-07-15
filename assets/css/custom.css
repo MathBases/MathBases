@@ -82,29 +82,49 @@ h1, h2 {
 /* "Filter by area" control on the index page (issue #86) */
 /* Keep the [hidden] attribute working despite the display rules below
    (a class's `display` would otherwise override [hidden]'s display:none). */
-.area-filter[hidden],
-.area-filter-menu[hidden] { display: none; }
-.area-filter {
-  position: relative;
+.area-filter-control[hidden],
+.area-filter-menu[hidden],
+.area-filter-chips-row[hidden] { display: none; }
+
+/* JS moves the filter control + the DataTables search box into this toolbar,
+   right-aligned on the title line so nothing below shifts down. */
+.index-toolbar {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
   gap: 8px;
-  margin: 0 0 12px 0;
-  z-index: 3;
 }
+.index-toolbar .dataTables_filter { margin: 0; text-align: right; }
+/* Pin both controls to the same height so they line up (the theme's own input
+   height is inconsistent across renders). */
+.index-toolbar .dataTables_filter input { height: 34px; box-sizing: border-box; margin-bottom: 8px; }
+
+.area-filter-control { position: relative; }
 .area-filter-toggle {
   font: inherit;
   cursor: pointer;
-  padding: 5px 12px;
+  height: 34px;          /* match the search input */
+  margin: 0 0 8px 0;     /* match the search input's bottom margin */
+  padding: 0 12px;
   color: #0a1045;
   background: #FBE6C5;
   border: 1px solid #0a1045;
   border-radius: 4px;
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 .area-filter-toggle.has-selection { background: #ffca76; }
 .area-filter-caret { font-size: 0.8em; }
 
+/* Selected areas, on their own row below the toolbar. */
+.area-filter-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 8px 0;
+}
 .area-filter-chips {
   display: inline-flex;
   flex-wrap: wrap;
@@ -146,10 +166,12 @@ h1, h2 {
   padding: 0 4px;
 }
 
+/* Right-aligned dropdown (the control sits at the top-right), capped so it
+   never runs off either edge of the viewport. */
 .area-filter-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   margin-top: 4px;
   z-index: 10;
   background: #fffcf7;
@@ -158,10 +180,13 @@ h1, h2 {
   box-shadow: 0 4px 14px rgba(10, 16, 69, 0.25);
   padding: 6px;
   max-height: 340px;
+  overflow-x: hidden;
   overflow-y: auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 1px 8px;
+  width: 660px;
+  max-width: calc(100vw - 24px);
 }
 .area-filter-opt {
   display: flex;
@@ -181,6 +206,17 @@ h1, h2 {
   font-size: 0.85em;
   font-variant-numeric: tabular-nums;
 }
+
+/* Narrow screens: the title wraps and there's no room to tuck the toolbar up
+   beside it, so let it flow below the title and stack the controls/menu. */
+@media (max-width: 800px) {
+  #imdb_table_wrapper { margin-top: 0; }
+  .index-toolbar { justify-content: flex-start; }
+}
 @media (max-width: 640px) {
-  .area-filter-menu { grid-template-columns: 1fr; }
+  .area-filter-menu {
+    grid-template-columns: 1fr;
+    left: 0;
+    right: auto;
+  }
 }

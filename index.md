@@ -2,12 +2,12 @@
 layout: plain
 ---
 <h1 class="smallcaps" id="imdb_title">Index of Mathematical DataBases</h1>
-<div id="area-filter" class="area-filter" hidden>
+<!-- Area filter (issue #86). JS moves #area-filter-control next to the DataTables
+     search box and #area-filter-chips-row onto its own row below them. -->
+<div id="area-filter-control" class="area-filter-control" hidden>
     <button type="button" id="area-filter-toggle" class="area-filter-toggle" aria-expanded="false" aria-controls="area-filter-menu">
         Filter by area <span class="area-filter-caret" aria-hidden="true">&#9662;</span>
     </button>
-    <span id="area-filter-chips" class="area-filter-chips"></span>
-    <button type="button" id="area-filter-clear" class="area-filter-clear" hidden>clear</button>
     <div id="area-filter-menu" class="area-filter-menu" role="group" aria-label="Filter by area" hidden>
         {%- for area in site.data.areas.areas -%}
             {%- assign n = 0 -%}
@@ -15,7 +15,7 @@ layout: plain
                 {%- if p.area contains area -%}{%- assign n = n | plus: 1 -%}{%- endif -%}
             {%- endfor -%}
             {%- if n > 0 -%}
-            <label class="area-filter-opt">
+            <label class="area-filter-opt" data-count="{{ n }}">
                 <input type="checkbox" value="{{ area }}">
                 <span class="area-filter-name">{{ area }}</span>
                 <span class="area-filter-cnt">{{ n }}</span>
@@ -23,6 +23,10 @@ layout: plain
             {%- endif -%}
         {%- endfor -%}
     </div>
+</div>
+<div id="area-filter-chips-row" class="area-filter-chips-row" hidden>
+    <span id="area-filter-chips" class="area-filter-chips"></span>
+    <button type="button" id="area-filter-clear" class="area-filter-clear" hidden>clear</button>
 </div>
 <table id="imdb_table" class="display datatable" data-order-columns="[1]">
     <thead>
@@ -132,101 +136,136 @@ layout: plain
 // `DataTable` (as in custom.html), not $.fn.dataTable. Hence: plain DOM + the
 // global constructor, no jQuery dependency.
 (function () {
-    function init() {
-        var AREA_COL = 4; // Info, Ascii Name, Name, References, Area, Tags, Description
+    var STORAGE_KEY = 'mathbases:areaFilter';
+    var AREA_COL = 4; // Info, Ascii Name, Name, References, Area, Tags, Description
+
+    function ready(fn) {
+        if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', fn); }
+        else { fn(); }
+    }
+
+    ready(function () {
         var tableEl = document.getElementById('imdb_table');
-        if (!tableEl || typeof DataTable === 'undefined') { return; }
-        // Retrieve (never create) the instance custom.html builds. custom.html
-        // initialises on jQuery's async ready, which runs after this native
-        // DOMContentLoaded handler, so we must not `new DataTable` it ourselves
-        // (that would win the race and drop custom.html's paging/search config).
-        var table = null;
-        function getTable() {
-            if (!table && DataTable.isDataTable(tableEl)) { table = new DataTable(tableEl); }
-            return table;
-        }
+        var control = document.getElementById('area-filter-control');
+        if (!tableEl || !control || typeof DataTable === 'undefined') { return; }
 
-        var filter = document.getElementById('area-filter');
-        var toggle = document.getElementById('area-filter-toggle');
-        var menu   = document.getElementById('area-filter-menu');
-        var chips  = document.getElementById('area-filter-chips');
-        var clear  = document.getElementById('area-filter-clear');
+        // custom.html builds the DataTable on jQuery's async ready, which runs
+        // after this handler, so poll until it exists, then only ever RETRIEVE
+        // it (creating it here would win the race and drop custom.html's config).
+        var tries = 0;
+        (function whenReady() {
+            if (DataTable.isDataTable(tableEl)) { setup(new DataTable(tableEl)); }
+            else if (tries++ < 200) { setTimeout(whenReady, 30); } // setTimeout, not rAF: rAF is paused in background tabs
+        })();
 
-        function escapeRegExp(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+        function setup(table) {
+            var toggle   = document.getElementById('area-filter-toggle');
+            var menu     = document.getElementById('area-filter-menu');
+            var chipsRow = document.getElementById('area-filter-chips-row');
+            var chips    = document.getElementById('area-filter-chips');
+            var clear    = document.getElementById('area-filter-clear');
+            var wrapper  = tableEl.closest('.dataTables_wrapper');
+            var search   = wrapper ? wrapper.querySelector('.dataTables_filter') : null;
 
-        function selectedAreas() {
-            return Array.prototype.slice.call(menu.querySelectorAll('input:checked'))
-                .map(function (c) { return c.value; });
-        }
+            // Order options by frequency (desc), then name (asc).
+            Array.prototype.slice.call(menu.querySelectorAll('.area-filter-opt'))
+                .sort(function (a, b) {
+                    var d = (+b.getAttribute('data-count')) - (+a.getAttribute('data-count'));
+                    return d || a.querySelector('.area-filter-name').textContent
+                        .localeCompare(b.querySelector('.area-filter-name').textContent);
+                })
+                .forEach(function (o) { menu.appendChild(o); });
 
-        function renderChips(areas) {
-            chips.textContent = '';
-            areas.forEach(function (a) {
-                var chip = document.createElement('button');
-                chip.type = 'button';
-                chip.className = 'area-filter-chip';
-                chip.setAttribute('data-area', a);
-                chip.textContent = a;
-                var x = document.createElement('span');
-                x.className = 'area-filter-chip-x';
-                x.setAttribute('aria-hidden', 'true');
-                x.textContent = '×';
-                chip.appendChild(x);
-                chips.appendChild(chip);
-            });
-        }
-
-        function applyFilter() {
-            var t = getTable();
-            if (!t) { return; }
-            var areas = selectedAreas();
-            if (areas.length === 0) {
-                t.column(AREA_COL).search('').draw();
-            } else {
-                var re = '\\|(?:' + areas.map(escapeRegExp).join('|') + ')\\|';
-                t.column(AREA_COL).search(re, true, false).draw();
+            // Place the control just left of the search box in a shared toolbar,
+            // with the selected-area chips on their own row just below.
+            if (search) {
+                var toolbar = document.createElement('div');
+                toolbar.className = 'index-toolbar';
+                search.parentNode.insertBefore(toolbar, search);
+                toolbar.appendChild(control);
+                toolbar.appendChild(search);
+                toolbar.parentNode.insertBefore(chipsRow, toolbar.nextSibling);
             }
-            renderChips(areas);
-            clear.hidden = areas.length === 0;
-            toggle.classList.toggle('has-selection', areas.length > 0);
-        }
 
-        function openMenu(open) {
-            menu.hidden = !open;
-            toggle.setAttribute('aria-expanded', String(open));
-        }
+            function escapeRegExp(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+            function boxes() { return Array.prototype.slice.call(menu.querySelectorAll('input[type=checkbox]')); }
+            function selectedAreas() {
+                return boxes().filter(function (c) { return c.checked; }).map(function (c) { return c.value; });
+            }
 
-        toggle.addEventListener('click', function (e) {
-            e.stopPropagation();
-            openMenu(menu.hidden);
-        });
-        menu.addEventListener('click', function (e) { e.stopPropagation(); });
-        menu.addEventListener('change', function (e) {
-            if (e.target && e.target.type === 'checkbox') { applyFilter(); }
-        });
-        chips.addEventListener('click', function (e) {
-            var chip = e.target.closest('.area-filter-chip');
-            if (!chip) { return; }
-            var a = chip.getAttribute('data-area');
-            Array.prototype.slice.call(menu.querySelectorAll('input')).forEach(function (c) {
-                if (c.value === a) { c.checked = false; }
+            function renderChips(areas) {
+                chips.textContent = '';
+                areas.forEach(function (a) {
+                    var chip = document.createElement('button');
+                    chip.type = 'button';
+                    chip.className = 'area-filter-chip';
+                    chip.setAttribute('data-area', a);
+                    chip.textContent = a;
+                    var x = document.createElement('span');
+                    x.className = 'area-filter-chip-x';
+                    x.setAttribute('aria-hidden', 'true');
+                    x.textContent = '×';
+                    chip.appendChild(x);
+                    chips.appendChild(chip);
+                });
+            }
+
+            function save(areas) {
+                try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(areas)); } catch (e) {}
+            }
+            function load() {
+                try { return JSON.parse(window.localStorage.getItem(STORAGE_KEY)) || []; } catch (e) { return []; }
+            }
+
+            function applyFilter(persist) {
+                var areas = selectedAreas();
+                if (areas.length === 0) {
+                    table.column(AREA_COL).search('').draw();
+                } else {
+                    var re = '\\|(?:' + areas.map(escapeRegExp).join('|') + ')\\|';
+                    table.column(AREA_COL).search(re, true, false).draw();
+                }
+                renderChips(areas);
+                clear.hidden = areas.length === 0;
+                chipsRow.hidden = areas.length === 0;
+                toggle.classList.toggle('has-selection', areas.length > 0);
+                if (persist !== false) { save(areas); }
+            }
+
+            function openMenu(open) {
+                menu.hidden = !open;
+                toggle.setAttribute('aria-expanded', String(open));
+            }
+
+            toggle.addEventListener('click', function (e) { e.stopPropagation(); openMenu(menu.hidden); });
+            menu.addEventListener('click', function (e) { e.stopPropagation(); });
+            menu.addEventListener('change', function (e) {
+                if (e.target && e.target.type === 'checkbox') { applyFilter(); }
             });
-            applyFilter();
-        });
-        clear.addEventListener('click', function () {
-            Array.prototype.slice.call(menu.querySelectorAll('input:checked'))
-                .forEach(function (c) { c.checked = false; });
-            applyFilter();
-        });
-        document.addEventListener('click', function () { openMenu(false); });
+            chips.addEventListener('click', function (e) {
+                var chip = e.target.closest('.area-filter-chip');
+                if (!chip) { return; }
+                var a = chip.getAttribute('data-area');
+                boxes().forEach(function (c) { if (c.value === a) { c.checked = false; } });
+                applyFilter();
+            });
+            clear.addEventListener('click', function () {
+                boxes().forEach(function (c) { c.checked = false; });
+                applyFilter();
+            });
+            document.addEventListener('click', function () { openMenu(false); });
 
-        filter.hidden = false; // reveal now that behaviour is wired up
-    }
+            // Restore the persisted selection, then reflect it without re-saving.
+            var saved = load();
+            if (saved.length) {
+                var set = {};
+                saved.forEach(function (a) { set[a] = true; });
+                boxes().forEach(function (c) { if (set[c.value]) { c.checked = true; } });
+            }
+            applyFilter(false);
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
+            control.hidden = false; // reveal now that it's wired up and placed
+        }
+    });
 })();
 </script>

@@ -4,58 +4,13 @@ layout: single
 
 {%- comment -%}
   Dataset homepage. Surfaces the fields documented in template.md; every block is
-  conditional so sparse entries stay clean. Two columns on wide screens: the
-  description on the left, an "at a glance" card pinned to the right (they stack
-  on narrow screens).
+  conditional so sparse entries stay clean. Two columns on wide screens: an "at a
+  glance" card pinned to the right, the description on the left (they stack on
+  narrow screens). The card is first in the DOM so it degrades to the top of the
+  page (rather than the bottom) if the flex styles are ever unavailable.
 {%- endcomment -%}
 
 <div class="ds-body">
-<div class="ds-main">
-
-{%- if page.short_description -%}<p class="ds-lead">{{ page.short_description }}</p>{%- endif -%}
-
-{%- if page.authors.size > 0 -%}
-  <p class="ds-byline">
-    {%- for a in page.authors -%}
-      {%- if a.homepage -%}<a href="{{ a.homepage }}">{{ a.name }}</a>{%- else -%}{{ a.name | default: a }}{%- endif -%}
-      {%- if a.orcid %}&#8202;<a class="ds-orcid" href="{{ a.orcid }}" title="ORCID record for {{ a.name }}"><i class="fab fa-orcid" aria-hidden="true"></i></a>{% endif -%}
-      {%- if a.email %}&#8202;<a href="mailto:{{ a.email }}" title="email {{ a.name }}"><i class="fas fa-envelope" aria-hidden="true"></i></a>{% endif -%}
-      {%- unless forloop.last %}, {% endunless -%}
-    {%- endfor -%}
-  </p>
-{%- endif -%}
-
-{%- if page.completeness -%}<p class="ds-completeness"><strong>Completeness.</strong> {{ page.completeness }}</p>{%- endif -%}
-
-{{ content }}
-
-{%- if page.references.size > 0 -%}
-  <section class="ds-section">
-    <h2 class="ds-h">References</h2>
-    <ul class="ds-references">
-      {%- for ref in page.references -%}
-        {%- for pair in ref -%}
-          {%- assign k = pair[0] -%}
-          {%- assign v = pair[1] -%}
-          <li>
-            {%- case k -%}
-              {%- when 'doi' -%}<a href="https://doi.org/{{ v }}">doi:{{ v }}</a>
-              {%- when 'arxiv' -%}<a href="https://arxiv.org/abs/{{ v }}">arXiv:{{ v }}</a>
-              {%- when 'eprint' -%}<a href="https://eprint.iacr.org/{{ v }}">ePrint {{ v }}</a>
-              {%- when 'mr' -%}<a href="https://mathscinet.ams.org/mathscinet-getitem?mr={{ v }}">MR {{ v }}</a>
-              {%- when 'isbn' -%}ISBN&nbsp;<a href="https://www.google.com/search?tbm=bks&q=isbn:{{ v }}">{{ v }}</a>
-              {%- when 'issn' -%}ISSN&nbsp;<a href="https://portal.issn.org/resource/ISSN/{{ v }}">{{ v }}</a>
-              {%- when 'url', 'web', 'blog' -%}<a href="{{ v }}">{{ v }}</a>
-              {%- else -%}{{ v }}
-            {%- endcase -%}
-          </li>
-        {%- endfor -%}
-      {%- endfor -%}
-    </ul>
-  </section>
-{%- endif -%}
-
-</div>{%- comment -%} /.ds-main {%- endcomment -%}
 
 <aside class="ds-card">
   <div class="ds-access">
@@ -117,5 +72,52 @@ layout: single
     </div>
   {%- endif -%}
 </aside>
+
+<div class="ds-main">
+
+{%- if page.short_description -%}<p class="ds-lead">{{ page.short_description }}</p>{%- endif -%}
+
+{%- if page.authors.size > 0 -%}
+  <p class="ds-byline">
+    {%- for a in page.authors -%}
+      {%- if a.homepage -%}<a href="{{ a.homepage }}">{{ a.name }}</a>{%- else -%}{{ a.name | default: a }}{%- endif -%}
+      {%- if a.orcid %}&#8202;<a class="ds-orcid" href="{{ a.orcid }}" title="ORCID record for {{ a.name }}"><i class="fab fa-orcid" aria-hidden="true"></i></a>{% endif -%}
+      {%- if a.email %}&#8202;<a href="mailto:{{ a.email }}" title="email {{ a.name }}"><i class="fas fa-envelope" aria-hidden="true"></i></a>{% endif -%}
+      {%- unless forloop.last %}, {% endunless -%}
+    {%- endfor -%}
+  </p>
+{%- endif -%}
+
+{%- if page.completeness -%}<p class="ds-completeness"><strong>Completeness.</strong> {{ page.completeness }}</p>{%- endif -%}
+
+{{ content }}
+
+{%- if page.references.size > 0 -%}
+  <section class="ds-section">
+    <h2 class="ds-h">References</h2>
+    <ul class="ds-references">
+      {%- for ref in page.references -%}
+        {%- for pair in ref -%}
+          {%- assign k = pair[0] -%}
+          {%- assign v = pair[1] -%}
+          <li>
+            {%- case k -%}
+              {%- when 'doi' -%}<a href="https://doi.org/{{ v }}">doi:{{ v }}</a>
+              {%- when 'arxiv' -%}<a href="https://arxiv.org/abs/{{ v }}">arXiv:{{ v }}</a>
+              {%- when 'eprint' -%}<a href="https://eprint.iacr.org/{{ v }}">ePrint {{ v }}</a>
+              {%- when 'mr' -%}<a href="https://mathscinet.ams.org/mathscinet-getitem?mr={{ v }}">MR {{ v }}</a>
+              {%- when 'isbn' -%}ISBN&nbsp;<a href="https://www.google.com/search?tbm=bks&q=isbn:{{ v }}">{{ v }}</a>
+              {%- when 'issn' -%}ISSN&nbsp;<a href="https://portal.issn.org/resource/ISSN/{{ v }}">{{ v }}</a>
+              {%- when 'url', 'web', 'blog' -%}<a href="{{ v }}">{{ v }}</a>
+              {%- else -%}{{ v }}
+            {%- endcase -%}
+          </li>
+        {%- endfor -%}
+      {%- endfor -%}
+    </ul>
+  </section>
+{%- endif -%}
+
+</div>{%- comment -%} /.ds-main {%- endcomment -%}
 
 </div>{%- comment -%} /.ds-body {%- endcomment -%}

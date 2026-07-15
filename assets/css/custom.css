@@ -231,11 +231,18 @@ h1, h2 {
 .ds-byline { margin: 0 0 18px 0; color: #555; }
 .ds-orcid { color: #a6ce39; }
 
-/* Two columns on wide screens: description left, "at a glance" card pinned right. */
-.ds-body { display: flex; gap: 26px; align-items: flex-start; }
-.ds-main { flex: 1 1 auto; min-width: 0; }
+/* Reclaim the theme's empty right-sidebar gutter on dataset pages, so the card
+   can sit at the true right edge with room for the description beside it. */
+.layout--dataset .page { padding-right: 0; }
+
+/* Two columns on wide screens: description left, "at a glance" card pinned right.
+   The card comes first in the DOM (so it degrades to the top, not the bottom),
+   and `order` puts it on the right. */
+.ds-body { display: flex; gap: 30px; align-items: flex-start; }
+.ds-main { flex: 1 1 auto; min-width: 0; order: 1; }
 .ds-card {
-  flex: 0 0 290px;
+  flex: 0 0 300px;
+  order: 2;
   align-self: flex-start;
   max-width: 100%;
   padding: 14px 16px;

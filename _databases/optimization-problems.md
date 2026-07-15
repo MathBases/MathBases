@@ -3,7 +3,7 @@ id: optimization-problems
 location: "https://teorth.github.io/optimizationproblems/"
 title: "Optimization Constants in Mathematics"
 area:
-  - analysis
+  - numerical analysis
   - combinatorics
   - number theory
 license: "Apache-2.0"

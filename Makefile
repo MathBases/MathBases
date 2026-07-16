@@ -19,9 +19,12 @@ build: _site
 clean:
 	rm -r _site
 
+test:
+	ruby validate.rb
+
 print-%:
 	@echo '$*=$($*)'
 
-.PHONY: all serve bootstrap build clean sortkeys
+.PHONY: all serve bootstrap build clean sortkeys test
 
 

@@ -129,9 +129,9 @@ Optional but recommended fields:
 - `tags`: List of tags (must match `_data/tags.yml`)
 - `badges`: List of badges (must match `_data/badges.yml`)
 
-### No Testing Infrastructure
+### Testing / Validation
 
-This project does not have automated tests. Validation is done through:
+This project validates `_databases` entries with `validate.rb`, a root-level, standard-library-only Ruby script that checks YAML frontmatter and required fields (`id`, `location`, `title`, `area`), and confirms `area` values are listed in `_data/areas.yml`. Run it locally with `make test` (or `ruby validate.rb`). It is enforced on every pull request by the `.github/workflows/validate.yml` GitHub Actions workflow, which also runs a production Jekyll build (`--config _config.yml`). Additional validation is done through:
 1. Jekyll build success
 2. Manual testing in development server
 3. YAML syntax validation

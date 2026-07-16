@@ -3,6 +3,8 @@
 id: tangles # REQUIRED, SAME AS FILE NAME
 location: "https://tangleinfo.cent.uw.edu.pl/" # REQUIRED, can be url, issn, etc
 title: "TangleInfo" # REQUIRED, the display name
+area:
+  - geometric topology
 # ascii_name: "My Favorite Database" # REQUIRED IFF title contains a non-standard character
 license: "CC BY-SA 4.0" # ENCOURAGED, the license under which the data may be used
 # num_objects: 123456 # OPTIONAL, number of objects in the dataset

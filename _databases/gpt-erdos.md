@@ -5,7 +5,6 @@ title: "GPT-Erdos"
 area:
   - number theory
   - combinatorics
-  - graph theory
 license: "CC0 1.0 Universal"
 parent_dataset: erdosproblems
 code_location: "https://github.com/neelsomani/gpt-erdos"

@@ -29,6 +29,16 @@ You may have an idea for a database but lack the time or mathematical expertise 
 
 If you know of a conference or workshop focused on mathematical databases, please let us know or add it to the list of [conferences](conferences) by making a pull request.
 
+## Validation
+
+Thanks for taking the time to contribute! Once you open a pull request, CI automatically checks every entry in `_databases`: it confirms the file has proper YAML frontmatter, that the required fields (`id`, `location`, `title`, `area`) are present, and that `area` only uses values listed in `_data/areas.yml`. You're welcome to run the same checks locally before opening a PR:
+
+```
+make test
+```
+
+(or equivalently, `ruby validate.rb`).
+
 ## Joining the community
 
 If you are interested in mathematical databases, we encourage you to join us on [Zulip](https://code4math.zulipchat.com/#narrow/stream/416464-MathBases), where you can ask questions and share your own experience.

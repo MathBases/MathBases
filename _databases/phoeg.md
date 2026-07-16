@@ -9,7 +9,8 @@ authors:
   homepage: https://laurencefloriani.github.io/
 - name: Thomas Lavend'Homme
   homepage: https://lavendthomas.github.io/
-area: combinatorics
+area:
+  - combinatorics
 tags:
 - graph theory
 title: PHOEG Helps to Obtain Extremal Graphs

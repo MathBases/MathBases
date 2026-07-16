@@ -67,3 +67,7 @@ bundle install
 or a similar path of your choosing.
 
 4. Run `make serve` to run locally
+
+## Validation
+
+Database entries are validated in CI on every pull request; you can run the same check locally with `make test`. See [contributing.md](contributing.md) for details.

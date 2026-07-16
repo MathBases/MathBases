@@ -37,6 +37,7 @@ exclude:
   - "DATA.md"
   - "template.md"
   - "split_data.py"
+  - "validate.rb"
   # Jekyll's default excludes (a custom `exclude:` replaces the defaults rather
   # than merging, so they must be restated). Without vendor/bundle/ here, the
   # Actions build tries to render files inside the bundler-installed gems and

@@ -6,7 +6,8 @@ authors:
   homepage: https://wwwhomes.uni-bielefeld.de/cgi-bin/cgiwrap/achim/index.cgi
 - name: Richard Schroeppel
   homepage: http://www.multimagie.com/English/Schroeppel.htm
-area: number theory
+area:
+  - number theory
 title: The Multiply Perfect Numbers Page
 searchable: true
 short_description: Records for multiply perfect numbers
